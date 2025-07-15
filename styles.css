@@ -1,0 +1,303 @@
+@font-face {
+    font-family: 'Paperlogy-8ExtraBold';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* 기본 초기화 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Paperlogy-8ExtraBold', sans-serif;
+}
+
+/* 헤더 스타일 */
+header {	
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  color: #1f4d3a;
+  width: 100%;
+  border-bottom: 1px solid #dcdcdc;
+  z-index: 1000;
+  display: flex;
+}
+
+header .inner {
+  position: relative;
+  max-width: 1500px;
+  min-width: 1500px;
+  font-size: 36px;
+  margin: 0 auto;
+}
+
+.inner-top {
+	display: flex;
+	height: 96px;	
+	align-items: baseline;
+}
+
+.inner-top a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.inner-top a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+.inner-top a:hover {
+  color: 	#3c725e;
+  text-decoration: none;
+}
+
+.inner-top a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+.inner-top span {
+	font-size: 16px;
+	height: 30px;
+}
+
+.logo {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  margin-right: 6px;
+}
+
+.logo img {
+	width: 100%;
+}
+
+.instar_logo {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+}
+
+.instar_logo img {
+	width: 100%;
+	vertical-align: middle;
+}
+
+/* 햄버거 메뉴 버튼 */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* 기본 네비게이션 */
+nav {
+	display: flex;
+	align-items: center;
+	position: relative;
+	width: 720px;
+	height: 96px;
+	font-size: 25px;
+	font-weight: 100;
+	margin-left: 150px;
+	font-family: 'Paperlogy-8ExtraBold';
+}
+
+nav ul.main-menu {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+nav ul.main-menu > li {
+  position: relative;
+}
+
+nav ul.main-menu a {
+  text-decoration: none;
+  color: #1f4d3a;
+  padding: 0.5rem 1rem;
+  display: block;
+}
+
+.wrap {
+	width:100%;
+	position: relative;
+	min-height: 1200px;
+	margin: 0;
+	padding: 0;
+	top: 96px;
+}
+
+.container {
+	max-width: 100%;
+	width: 100%;
+	min-width: 1500px;
+	padding: 0;
+}
+
+.content {
+	padding: 0;
+	display: inline-block;
+	float: none;
+	position: relative;
+	width: 100%;
+}
+
+.main-banner {
+	width: 100%;
+	height: 580px;
+	position: relative;
+	overflow: hidden;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3); /* 연한 흰색 반투명 필터 */
+  z-index: 2; /* swiper보다 위에 위치 */
+  pointer-events: none; /* 클릭 방해 방지 */
+}
+
+.sub_banner {
+	font-size: 20px;
+	height:500px;
+	border-bottom: 1px solid black;
+	color: black;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.map_container {
+	width: 1250px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	font-size: 30px;
+	padding-top: 100px;
+}
+
+.map_container > :nth-child(1) {
+  width: 500px;
+  display: inline-block;
+  margin-right: 100px;
+}
+
+.map_container > :nth-child(2) {
+  width: 500px;
+  display: inline-block;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+footer {
+	width: 100%;
+	margin: 0 auto;
+	overflow: hidden;
+	background: #222;
+	padding: 10px 10px;
+}
+
+.footer-inner {
+	position:relative;
+	max-width: 1500px;
+	min-width: 1500px;
+	margin: 0 auto;
+	padding : 20px 0;
+}
+
+.f-text {
+	color: #929292;
+	font-size: 15px;
+	line-height: 35px;
+}
+
+.f-text::after {
+	content: '';
+	border-right: 1px solid #929292;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+#office_map {
+    width: 500px;
+	height: 400px;
+	margin-top: 30px;
+}
+
+#fac_map {
+    width: 500px;
+	height: 400px;
+	margin-top: 30px;
+}
+
+/* ✅ 반응형: 모바일 화면 */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+
+  nav {
+    display: none;
+    width: 100%;
+  }
+
+  nav.active {
+    display: block;
+  }
+
+  nav ul.main-menu {
+    flex-direction: column;
+    width: 100%;
+    background-color: #4a90e2;
+  }
+
+  nav ul.main-menu li {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+}
