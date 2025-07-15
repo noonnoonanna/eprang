@@ -4,58 +4,48 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>(주)이피랑</title>
-	<link rel="stylesheet" href="css/styles.css" />
 </head>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<link rel="stylesheet" href="css/styles.css" />
 <script>
-  // 햄버거 버튼 클릭 시 메뉴 열기/닫기
-  const toggleBtn = document.querySelector('.menu-toggle');
-  const nav = document.querySelector('nav');
-
-  toggleBtn.addEventListener('click', () => {
-    nav.classList.toggle('active');
-  });
-
-  // 모바일에서 회사소개 클릭 시 하위 메뉴 토글
-  const mainItems = document.querySelectorAll('.main-menu > li > a');
-
-  mainItems.forEach(item => {
-    item.addEventListener('click', (e) => {
-      const parentLi = item.parentElement;
-      if (window.innerWidth <= 768) {
-        const subMenu = parentLi.querySelector('.submenu');
-        if (subMenu) {
-          e.preventDefault(); // 링크 이동 방지
-          parentLi.classList.toggle('open');
-        }
-      }
-    });
-  });
-</script>
-<script>
-	//지도 fade-in 효과
-	document.addEventListener('DOMContentLoaded', () => {
-		const elements = document.querySelectorAll('.fade-in');
-		const observer = new IntersectionObserver(entries => {
-		entries.forEach(entry => {
-			if (entry.isIntersecting) {
-			entry.target.classList.add('visible');
-			observer.unobserve(entry.target); // 한 번만 실행하려면
-			}
-		});
-		}, {
-		threshold: 0.1
-		});
+	//햄버거메뉴
+	document.addEventListener('DOMContentLoaded', function () {
+		const toggleBtn = document.querySelector('.menu-toggle');
+		const nav = document.querySelector('nav');
 	
-		elements.forEach(el => observer.observe(el));
+		if (toggleBtn && nav) {
+			toggleBtn.addEventListener('click', () => {
+				nav.classList.toggle('active');
+			});
+		}
+	
+		const mainItems = document.querySelectorAll('.main-menu > li > a');
+		mainItems.forEach(item => {
+			item.addEventListener('click', (e) => {
+				const parentLi = item.parentElement;
+				if (window.innerWidth <= 768) {
+					const subMenu = parentLi.querySelector('.submenu');
+					if (subMenu) {
+						e.preventDefault();
+						parentLi.classList.toggle('open');
+					}
+				}
+			});
+		});
 	});
 </script>
 <body>
 	<header>
 		<div class="inner">
 			<div class="inner-top">
-				<a href="index.html">
-					<div class="logo"><img src="images/logo.png" alt="이피랑 로고"></div>	이피랑 <span>with leaf</span>
+				<a href="index.html" class="logo-text">
+					<div class="logo"><img src="images/logo.png" alt="이피랑 로고"></div>
+					<div class="brand">
+						<span class="brand-name">이피랑</span>
+						<span class="brand-sub">with leaf</span>
+					</div>
 				</a>
 				<nav>
 					<ul class="main-menu">
@@ -77,51 +67,12 @@
 		<div class="container">
 			<div class="content">
 				<div class="sub_banner">
-					오시는 길
+					서비스
 				</div>
 				<div class="map_container">
 					<div class="fade-in">Office<div id="office_map"></div></div>
 					<div class="fade-in">Farm<div id="fac_map"></div></div>
-				</div>
-				<script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=8cfbccd03d7ee80ea73496965b3babec"></script>
-				<script>
-				const office_container = document.getElementById('office_map');
-				const office_options = {
-					center: new kakao.maps.LatLng(37.6440688694373, 126.625381940767), // 지도의 중심좌표
-					level: 3
-				};
-				
-				const office_map = new kakao.maps.Map(office_container, office_options);
-				
-				const office_marker = new kakao.maps.Marker({
-					position: new kakao.maps.LatLng(37.6440688694373, 126.625381940767),
-					map: office_map
-				});
-				
-				//const office_infowindow = new kakao.maps.InfoWindow({
-				//	content: '<div style="padding:5px;font-size:18px;width: 120px; ">(주)이피랑 Office</div>'
-				//});
-				//office_infowindow.open(office_map, office_marker);
-				
-				//공장
-				const fac_container = document.getElementById('fac_map');
-				const fac_options = {
-					center: new kakao.maps.LatLng(37.621496722728, 126.74029283932), // 지도의 중심좌표
-					level: 3
-				};
-				
-				const fac_map = new kakao.maps.Map(fac_container, fac_options);
-				
-				const fac_marker = new kakao.maps.Marker({
-					position: new kakao.maps.LatLng(37.621496722728, 126.74029283932),
-					map: fac_map
-				});
-				
-				//const fac_infowindow = new kakao.maps.InfoWindow({
-				//	content: '<div style="padding:5px;font-size:18px;">(주)이피랑 Farm</div>'
-				//});
-				//fac_infowindow.open(fac_map, fac_marker);
-				</script>
+				</div>				
 			</div>
 		</div>
 	</div>
