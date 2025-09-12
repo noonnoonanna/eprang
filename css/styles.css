@@ -56,7 +56,7 @@ header .inner {
 
 .logo {
   width: 35px;
-  height: 35px;
+  height: 33x;
   display: inline-block;
 }
 
@@ -79,7 +79,7 @@ header .inner {
   align-items: center;
   text-decoration: none;
   color: inherit;
-  gap: 8px;
+  gap: 4px;
 }
 
 .logo-text .brand {
@@ -534,3 +534,4 @@ footer {
     transform: translateY(0);
   }
 }
+
