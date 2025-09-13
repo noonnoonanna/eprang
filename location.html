@@ -120,34 +120,35 @@
 					<div class="fade-in"><div id="fac_map"></div></div>
 				</div>
 				<script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=8cfbccd03d7ee80ea73496965b3babec"></script>
-				<script>
-					const fac_container = document.getElementById('fac_map');
-					const markerPosition = new kakao.maps.LatLng(37.621496722728, 126.74029283932);
+<script>
+  const fac_container = document.getElementById('fac_map');
+  const markerPosition = new kakao.maps.LatLng(37.621496722728, 126.74029283932);
 
-					const fac_map = new kakao.maps.Map(fac_container, {
-  						center: markerPosition,
-  						level: 2
-					});
+  // 중심 좌표를 살짝 아래로 이동 → 마커가 위에 떠 보이게
+  const centerPosition = new kakao.maps.LatLng(37.6208, 126.74029283932); // 위도 ↓ 0.0007 정도
 
-					const fac_marker = new kakao.maps.Marker({
-  						position: markerPosition,
-  						map: fac_map
-					});
+  const fac_map = new kakao.maps.Map(fac_container, {
+    center: centerPosition,
+    level: 2
+  });
 
-					// 커스텀 오버레이 컨텐츠
-					const label = document.createElement('div');
-					label.className = 'map-label';
-					label.textContent = '(주)이피랑';
+  const fac_marker = new kakao.maps.Marker({
+    position: markerPosition,
+    map: fac_map
+  });
 
-					// 오버레이 생성
-					const fac_overlay = new kakao.maps.CustomOverlay({
-  						position: markerPosition,
-  						content: label,
-  						map: fac_map,
-  						yAnchor: 1.3   // 마커 꼭지와의 간격 미세조정 (1.2~1.6 사이 시도 권장)  ← 확실하지 않음: 화면 DPI/콘텐츠 높이에 따라 값이 달라질 수 있음
- 						// xAnchor: 0.5 // 가로 중앙 정렬(기본 0.5, 필요시 조정)
-					});
-				</script>
+  // 커스텀 오버레이 컨텐츠
+  const label = document.createElement('div');
+  label.className = 'map-label';
+  label.textContent = '(주)이피랑';
+
+  const fac_overlay = new kakao.maps.CustomOverlay({
+    position: markerPosition,
+    content: label,
+    map: fac_map,
+    yAnchor: 1.3
+  });
+</script>
 			</div>
 		</div>
 	</div>
@@ -161,6 +162,7 @@
 </body>
 
 </html>
+
 
 
 
