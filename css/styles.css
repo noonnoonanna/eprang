@@ -53,7 +53,7 @@ header .inner {
 }
 
 .logo-img {
-  width: 200px;
+  width: 160px;
   height: auto;
   display: block;
 }
@@ -502,6 +502,7 @@ footer {
     transform: translateY(0);
   }
 }
+
 
 
 
