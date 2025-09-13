@@ -5,9 +5,10 @@
 }
 
 body {
-  font-family: 0.75em Verdana,Dotum,AppleGothic,sans-serif;
+  font-size: 0.75em;
   line-height: 1.6;
   color: #1f4d3a;
+  font-family: Verdana, Dotum, AppleGothic, sans-serif;
 }
 
 /* ===== HEADER ===== */
@@ -46,14 +47,15 @@ header .inner {
   text-decoration: none !important;
 }
 
-.logo {
-  width: 35px;
-  height: 33x;
-  display: inline-block;
+.logo-link {
+  display: inline-flex;
+  align-items: center;
 }
 
-.logo img {
-  width: 100%;
+.logo-img {
+  width: 200px;
+  height: auto;
+  display: block;
 }
 
 .instar_logo {
@@ -64,32 +66,6 @@ header .inner {
 .instar_logo img {
   width: 100%;
   vertical-align: middle;
-}
-
-.logo-text {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: inherit;
-  gap: 4px;
-}
-
-.logo-text .brand {
-  display: flex;
-  flex-direction: row;
-  align-items: baseline;
-  gap: 4px;
-  white-space: nowrap; /* 줄바꿈 방지 */
-}
-
-.brand-name {
-  font-size: 2rem;
-}
-
-.brand-sub {
-  font-size: 0.9rem;
-  color: #3c725e;
-  opacity: 0.7;
 }
 
 /* ===== NAVIGATION ===== */
@@ -526,6 +502,7 @@ footer {
     transform: translateY(0);
   }
 }
+
 
 
 
