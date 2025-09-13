@@ -6,9 +6,9 @@
 
 body {
   line-height: 1.6;
-  color: #1f4d3a;
+  color: #094D2A;
   font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 /* ===== HEADER ===== */
@@ -97,7 +97,7 @@ nav ul.main-menu {
 
 nav ul.main-menu li a {
   text-decoration: none;
-  color: #1f4d3a;
+  color: #094D2A;
   padding: 0.5rem 1rem;
   display: block;
   transition: 0.3s;
@@ -303,7 +303,7 @@ footer {
     font-size: 2rem;
     background: none;
     border: none;
-    color: #1f4d3a;
+    color: #094D2A;
     z-index: 1100;
     cursor: pointer;
   }
@@ -331,7 +331,7 @@ footer {
   }
 
   nav ul.main-menu li a {
-    color: #1f4d3a;
+    color: #094D2A;
     padding: 1rem 1.5rem;
     text-align: left;
     font-size: 1rem;
@@ -412,7 +412,7 @@ footer {
     font-size: 2rem;
     background: none;
     border: none;
-    color: #1f4d3a;
+    color: #094D2A;
     z-index: 1100;
     cursor: pointer;
   }
@@ -440,7 +440,7 @@ footer {
   }
 
   nav ul.main-menu li a {
-    color: #1f4d3a;
+    color: #094D2A;
     padding: 1.2rem 2rem;
     text-align: left;
     font-size: 1.1rem;
@@ -502,6 +502,7 @@ footer {
     transform: translateY(0);
   }
 }
+
 
 
 
