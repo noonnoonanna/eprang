@@ -5,10 +5,10 @@
 }
 
 body {
-  font-size: 0.75em;
   line-height: 1.6;
   color: #1f4d3a;
-  font-family: Verdana, Dotum, AppleGothic, sans-serif;
+  font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+  font-weight: 500;
 }
 
 /* ===== HEADER ===== */
@@ -502,6 +502,7 @@ footer {
     transform: translateY(0);
   }
 }
+
 
 
 
