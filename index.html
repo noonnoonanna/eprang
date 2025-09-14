@@ -48,7 +48,7 @@
 						<li><a href="intro.html">회사소개</a></li>
 						<li><a href="service.html">서비스</a></li>
 						<li><a href="#">고객센터</a></li>
-						<li><a href="location.html">오시는 길</a></li>
+						<li><a href="location.html">Contact</a></li>
 					</ul>
 				</nav>
 				<a href="https://www.instagram.com/eprang_official/#">
@@ -60,51 +60,87 @@
 	</header>
 	
 	<div class="wrap">
-		<div class="container">
-			<div class="content">
-				<div class="main-banner">
-					<div class="swiper mySwiper">
-						<div class="swiper-wrapper">
-							<div class="swiper-slide"><img src="images/main_img1.jpg" alt="이미지1" /></div>
-							<div class="swiper-slide"><img src="images/main_img2.jpg" alt="이미지2" /></div>
-							<div class="swiper-slide"><img src="images/main_img3.jpg" alt="이미지3" /></div>
-							<div class="swiper-slide"><img src="images/main_img4.jpg" alt="이미지4" /></div>
-						</div>
-						<!-- Optional navigation -->
-						<div class="swiper-pagination"></div>
-						<div class="swiper-button-next"></div>
-						<div class="swiper-button-prev"></div>
-					</div>
-					<div class="overlay"></div><!--이미지 효과넣기 위해-->
+		<div class="main-banner">
+			<div class="swiper mySwiper">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"><img src="images/main_img1.jpg" alt="이미지1" /></div>
+					<div class="swiper-slide"><img src="images/main_img2.jpg" alt="이미지2" /></div>
+					<div class="swiper-slide"><img src="images/main_img3.jpg" alt="이미지3" /></div>
+					<div class="swiper-slide"><img src="images/main_img4.jpg" alt="이미지4" /></div>
 				</div>
 			</div>
+			<div class="overlay"></div>
 		</div>
 		
-		<script>
-			const swiper = new Swiper(".mySwiper", {
-				loop: true,
-				autoplay: {
-					delay: 3000,
-					disableOnInteraction: false,
-				},
-				effect: "fade", // 또는 slide
-				pagination: {
-					el: ".swiper-pagination",
-					clickable: true,
-				},
-				navigation: {
-					nextEl: ".swiper-button-next",
-					prevEl: ".swiper-button-prev",
-				},
-			});
-		</script>
+		<div class="container">			
+			<section class="hero section">
+				<div class="hero-inner">
+					<h1 class="hero-title">수경·양액 재배에 최적화된<br><span class="marker">맞춤형 육묘장</span> 설계·제조·설치</h1>
+					<p class="hero-desc">
+					누구나, 어디서나 — 소면적·도심형 농가도<br>
+					안정적으로 시작할 수 있는 인프라를 만듭니다.
+					</p>
+				</div>
+			</section>
 		
-		<section class="content">
-			<div class="main_title">ABOUT</div>
-			<div class="main_subtitle">농산물</div>
-			<div class="main_desc">안전하고 맛있는 먹거리, 믿을 수 있는 먹거리를 전 국민의 식탁에 공급하는</div>
-		</section>
-	</div>
+			<section class="vision section">
+			<h2>VISION</h2>
+			<p class="vision-text">
+				소면적·도심형 농가도 안정적으로 시작할 수 있는<br>
+				<strong>표준형 육묘 인프라의 대명사</strong>
+			</p>
+			<p class="mission-text">
+				설비부터 육묘, 이식까지<br>
+				끊김 없는 체계로 <strong>초기 실패 비용을 최소화</strong>합니다.
+			</p>
+			</section>
+		
+<section class="biz section">
+  <div class="container">
+    <div class="biz-items">
+      <div class="biz-card">
+        <h3>육묘장 모듈 OEM</h3>
+        <p>프레임, LED, 양액 설비, 제어장치까지 설계–가공–설치 일괄 수행</p>
+      </div>
+      <div class="biz-card">
+        <h3>계약 육묘</h3>
+        <p>설비·작목·계절에 맞춘 맞춤 생산과 적기 납품</p>
+      </div>
+      <div class="biz-card">
+        <h3>운영 표준 교육</h3>
+        <p>SOP, 위생·안전교육, 검수 체크리스트까지 인계</p>
+      </div>
+      <div class="biz-card">
+        <h3>애프터케어</h3>
+        <p>트레이·필터·부품 등 소모품 정기 공급 및 점검</p>
+      </div>
+    </div>
+  </div>
+</section>
+		
+			<section class="cta section">
+			<h2>이피랑이 당신의 첫 수확을 빠르게 만듭니다</h2>
+			<p>설비부터 운영까지 끊김 없는 육묘 인프라로<br>안정적인 육묘를 시작하세요.</p>
+			<a href="location.html" class="cta-btn">상담 요청하기</a>
+			</section>
+		
+		</div> <!-- /.container -->
+	</div> <!-- /.wrap -->
+
+<script>
+  const swiper = new Swiper(".mySwiper", {
+    loop: true,
+    autoplay: {
+      delay: 3500,
+      disableOnInteraction: false,
+    },
+    effect: "fade",
+    allowTouchMove: false,
+    navigation: false,
+    pagination: false,
+  });
+</script>
+
 
 	<footer>
 		<div class="footer-inner">
