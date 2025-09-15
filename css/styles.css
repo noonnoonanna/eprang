@@ -87,7 +87,6 @@ nav {
   justify-content: center;
   width: 100%;
   font-size: 20px;
-  margin-top: 10px;
 }
 
 nav ul.main-menu {
@@ -698,6 +697,7 @@ footer {
     transform: translateY(0);
   }
 }
+
 
 
 
