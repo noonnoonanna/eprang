@@ -16,8 +16,11 @@
 		const nav = document.querySelector('nav');
 	
 		if (toggleBtn && nav) {
+			toggleBtn.setAttribute('aria-expanded', 'false');
 			toggleBtn.addEventListener('click', () => {
-				nav.classList.toggle('active');
+				const isActive = nav.classList.toggle('active');
+				toggleBtn.setAttribute('aria-expanded', String(isActive));
+				document.body.classList.toggle('nav-open', isActive); // 스크롤 잠금
 			});
 		}
 	
@@ -30,6 +33,11 @@
 					if (subMenu) {
 						e.preventDefault();
 						parentLi.classList.toggle('open');
+					} else {
+						// 서브메뉴 없고 일반 링크면 메뉴 닫기
+						document.querySelector('nav')?.classList.remove('active');
+						toggleBtn?.setAttribute('aria-expanded', 'false');
+						document.body.classList.remove('nav-open');
 					}
 				}
 			});
