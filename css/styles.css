@@ -538,21 +538,13 @@ footer {
   nav ul.main-menu li a:hover {
     background-color: #f3f3f3;
   }
-
+  
   .main-banner {
-    height: 300px;
+	  height: 220px;
   }
-
-  .main_title {
-    font-size: 24px;
-  }
-
-  .main_subtitle {
-    font-size: 20px;
-  }
-
-  .main_desc {
-    font-size: 16px;
+  
+  .swiper { 
+    height: clamp(200px, 56vw, 420px);  /* 최소 200px, 보통 화면폭의 56%, 최대 420px */
   }
 
   .map_container {
@@ -575,6 +567,39 @@ footer {
   .instar_logo {
     display: none;
   }
+  
+   .wrap { padding-top: 80px; }
+
+  /* 로고 크기 살짝 축소 */
+  .logo-img { width: 132px; }
+
+  /* 컨텐츠 좌우 여백 확보 */
+  .container { padding: 0 16px; }
+
+  /* 히어로 타이포/간격 다이어트 */
+  .hero { min-height: 70vh; }
+  .hero-title { font-size: clamp(26px, 7vw, 34px); }
+  .hero-desc {
+    margin-top: 24px;                 /* 기존 88px → 24px */
+    font-size: clamp(16px, 4.5vw, 20px);
+    line-height: 1.6;
+  }
+
+  /* 섹션 패딩 축소 (PC 느낌 유지하며 여백만 정리) */
+  .section { padding: 56px 0; }
+
+  /* 비즈니스 섹션: 1열 + 유동 높이 */
+  .biz-items {
+    grid-template-columns: 1fr;       /* 2열 → 1열 */
+    gap: 20px;
+    max-width: 720px;
+  }
+  .biz-card {
+    height: auto;                     /* 고정 → 콘텐츠 기반 */
+    padding: 24px 20px;               /* 여백 다이어트 */
+  }
+  .biz-card h3 { font-size: 20px; }
+  .biz-card p  { font-size: 16px; line-height: 1.7; }
   
   .sub_banner {
 	height: 200px;
@@ -647,21 +672,24 @@ footer {
   nav ul.main-menu li a:hover {
     background-color: #f3f3f3;
   }
-
-  .main-banner {
-    height: 400px;
+  
+    .main-banner {
+	  height: 220px;
   }
+  
+  .wrap { padding-top: 88px; }
+  .container { padding: 0 20px; }
 
-  .main_title {
-    font-size: 28px;
+  .hero-desc { margin-top: 36px; }
+
+  .biz-items {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+    max-width: 1000px;
   }
-
-  .main_subtitle {
-    font-size: 22px;
-  }
-
-  .main_desc {
-    font-size: 16px;
+  .biz-card {
+    height: auto;
+    padding: 32px 24px;
   }
 
   .map_container {
@@ -697,6 +725,9 @@ footer {
     transform: translateY(0);
   }
 }
+
+body.nav-open { overflow: hidden; }
+
 
 
 
