@@ -228,10 +228,11 @@ nav ul.main-menu li a:hover {
 
 .vision-text,
 .mission-text {
-  font-size: 18px;
+  font-size: clamp(16px, 4.5vw, 20px);
   color: #444;
   margin-bottom: 12px;
   line-height: 1.6;
+  white-space: nowrap;
 }
 
 /* === BUSINESS === */
@@ -540,7 +541,7 @@ footer {
   }
   
   .main-banner {
-	  height: 220px;
+	  height: 260px;
   }
   
   .swiper { 
@@ -573,9 +574,6 @@ footer {
   /* 로고 크기 살짝 축소 */
   .logo-img { width: 132px; }
 
-  /* 컨텐츠 좌우 여백 확보 */
-  .container { padding: 0 16px; }
-
   /* 히어로 타이포/간격 다이어트 */
   .hero { min-height: 70vh; }
   .hero-title { font-size: clamp(26px, 7vw, 34px); }
@@ -593,6 +591,7 @@ footer {
     grid-template-columns: 1fr;       /* 2열 → 1열 */
     gap: 20px;
     max-width: 720px;
+	padding: 0 15px;
   }
   .biz-card {
     height: auto;                     /* 고정 → 콘텐츠 기반 */
@@ -674,11 +673,10 @@ footer {
   }
   
     .main-banner {
-	  height: 220px;
+	  height: 260px;
   }
   
   .wrap { padding-top: 88px; }
-  .container { padding: 0 20px; }
 
   .hero-desc { margin-top: 36px; }
 
@@ -686,6 +684,7 @@ footer {
     grid-template-columns: repeat(2, 1fr);
     gap: 28px;
     max-width: 1000px;
+	padding: 0 15px;
   }
   .biz-card {
     height: auto;
