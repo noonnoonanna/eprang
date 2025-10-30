@@ -1,89 +1,211 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>(주)이피랑</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>회사소개 | 이피랑</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="preload" href="images/main_img1.jpg" as="image" />
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <style>
+  
+/* === Utilities for simplified index === */
+.lead{ font-size: clamp(16px, 4vw, 22px); color: var(--ink-600); line-height: 1.85; max-width: 840px; margin: 0 auto; }
+.center{ text-align:center; }
+
+
+/* === Sub-page helpers === */
+body.sub-page{ color:#111; }
+.sub-header{ border-bottom:1px solid rgba(0,0,0,.06); }
+.sub-footer{ border-top:1px solid rgba(0,0,0,.06); }
+.band{ padding:48px 0; }
+.band-gray{ background:#f7f7f8; }
+.band-white{ background:#fff; }
+.section-divider{ height:12px; background: linear-gradient(90deg,#eee,#f7f7f8); }
+
+  </style>
 </head>
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-<link rel="stylesheet" href="css/styles.css" />
-<script>
-	//햄버거메뉴
-	document.addEventListener('DOMContentLoaded', function () {
-		const toggleBtn = document.querySelector('.menu-toggle');
-		const nav = document.querySelector('nav');
-	
-		if (toggleBtn && nav) {
-			toggleBtn.addEventListener('click', () => {
-				nav.classList.toggle('active');
-			});
-		}
-	
-		const mainItems = document.querySelectorAll('.main-menu > li > a');
-		mainItems.forEach(item => {
-			item.addEventListener('click', (e) => {
-				const parentLi = item.parentElement;
-				if (window.innerWidth <= 768) {
-					const subMenu = parentLi.querySelector('.submenu');
-					if (subMenu) {
-						e.preventDefault();
-						parentLi.classList.toggle('open');
-					}
-				}
-			});
-		});
-	});
-</script>
-<body>
-	<header>
-		<div class="inner">
-			<div class="inner-top">
-				<a href="index.html" class="logo-link" aria-label="이피랑 로고">
-        			<img class="logo-img" src="images/logo.png" alt="이피랑 로고">
-      			</a>
-				<nav>
-					<ul class="main-menu">
-						<li><a href="intro.html">회사소개</a></li>
-						<li><a href="service.html">서비스</a></li>
-						<li><a href="#">고객센터</a></li>
-						<li><a href="location.html">오시는 길</a></li>
-					</ul>
-				</nav>
-				<a href="https://www.instagram.com/eprang_official/#">
-					<div class="instar_logo"><img src="images/Instagram_logo.png" alt="인스타그램 로고"></div>
-				</a>
-			</div>
-			<button class="menu-toggle" aria-label="메뉴 열기">☰</button>
-		</div>
-	</header>
-	
-	<div class="wrap">
-		<div class="container">
-			<div class="content">
-				<div class="sub_banner">
-					회사소개
-				</div>
-				<div class="map_container">
-					<div class="fade-in">Office<div id="office_map"></div></div>
-					<div class="fade-in">Farm<div id="fac_map"></div></div>
-				</div>				
-			</div>
-		</div>
-	</div>
+<body class="sub-page">
+  <a href="#main" class="skip-link">본문 바로가기</a>
 
-	<footer>
-		<div class="footer-inner">
-			<span class="f-text">법인명(상호): (주)이피랑</span><span class="f-text">주소: 경기도 김포시 고촌읍 상미로9번길 41</span><br>
-			<span class="f-text">Copyright ⓒ 2025 이피랑 All Rights Reserved.</span>
-		</div>
-	</footer>
+  <header role="banner" class="sub-header">
+    <div class="inner">
+      <div class="inner-top">
+        <a href="index.html" class="logo-link" aria-label="이피랑 로고">
+          <img class="logo-img" src="images/logo.png" alt="이피랑 로고" />
+        </a>
+
+        <nav id="global-nav" aria-label="주요 메뉴">
+          <ul class="main-menu" role="menubar">
+            <li role="none"><a role="menuitem" href="about.html" aria-current="page">회사소개</a></li>
+            <li role="none"><a role="menuitem" href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <a class="sns-link" href="https://www.instagram.com/eprang_official/#" aria-label="인스타그램 새창" target="_blank" rel="noopener">
+          <div class="instar_logo"><img src="images/Instagram_logo.png" alt="" aria-hidden="true"></div>
+        </a>
+
+        <button class="menu-toggle" aria-expanded="false" aria-controls="global-nav" aria-label="메뉴 열기">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- 서브 배너: 명확한 분리영역 (회색 배경) -->
+    <section class="sub-banner band band-gray center" aria-label="회사소개 배너">
+      <div class="container">
+        <h1 class="page-title">회사소개</h1>
+        <p class="lead">헬스테크 × 애그테크의 만남, <strong>이피랑 Ipi</strong></p>
+      </div>
+    </section>
+
+    <!-- 구분선 -->
+    <div class="section-divider" aria-hidden="true"></div>
+
+    <!-- 스냅샷 -->
+    <section class="section band band-white">
+      <div class="container">
+        <h2 class="section-title">Ipi 한눈에 보기</h2>
+        <div class="biz-items">
+          <article class="biz-card">
+            <h3>우리는</h3>
+            <p>설문 기반 맞춤 원물 추천과 <b>소형 스마트팜</b>·<b>라이브 플러그(육묘)</b> 구독을 결합한 제조사입니다.</p>
+          </article>
+          <article class="biz-card">
+            <h3>우리가 푸는 문제</h3>
+            <p>“신선한 원물 섭취를 꾸준히” — 신선도·번거로움·지속성 문제를 제품과 구독으로 해결합니다.</p>
+          </article>
+          <article class="biz-card">
+            <h3>우리의 약속</h3>
+            <p>간단·안전·지속을 원칙으로, 가정에서 쉽게 키우고 바로 섭취할 수 있는 경험을 제공합니다.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 비즈니스 모델 -->
+    <section class="section band band-gray">
+      <div class="container">
+        <h2 class="section-title">비즈니스 모델</h2>
+        <ul class="feature-list">
+          <li><b>설문 추천 엔진</b> — 목표·섭취 습관·알레르기 정보를 반영해 허브/잎채소 세트를 제안</li>
+          <li><b>제품</b> — 탁상형·슬림형 등 <b>소형 스마트팜</b> 하드웨어</li>
+          <li><b>구독</b> — 활착률 높은 <b>라이브 플러그(육묘)</b> 정기공급</li>
+          <li><b>체험→전환</b> — 8주 체험 패키지로 시작, 데이터 기반 맞춤 구독으로 전환</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 사용자 여정 -->
+    <section class="section band band-white">
+      <div class="container">
+        <h2 class="section-title">사용자 여정</h2>
+        <ol class="steps">
+          <li>간단 설문</li>
+          <li>맞춤 세트 추천</li>
+          <li>8주 체험</li>
+          <li>정기구독으로 지속</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 제품 소개 -->
+    <section class="section band band-gray">
+      <div class="container">
+        <h2 class="section-title">제품 & 서비스</h2>
+        <div class="product-grid">
+          <article class="product-card">
+            <img src="images/main_img1.png" alt="탁상형 소형 스마트팜" />
+            <h3>소형 스마트팜</h3>
+            <p>주방·책상 어디에나 놓기 쉬운 폼팩터. 자동 급수/광원으로 초보도 쉽게.</p>
+          </article>
+          <article class="product-card">
+            <img src="images/main_img2.png" alt="라이브 플러그(육묘) 정기 공급" />
+            <h3>라이브 플러그 구독</h3>
+            <p>활착이 완료된 육묘를 정기배송. 신선한 원물을 끊김 없이 즐길 수 있습니다.</p>
+          </article>
+          <article class="product-card">
+            <img src="images/main_img1.png" alt="맞춤 원물 추천" />
+            <h3>맞춤 추천</h3>
+            <p>건강 목표와 식습관에 맞춘 허브/잎채소 조합을 데이터 기반으로 제안합니다.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 고지 -->
+    <section class="section band band-white">
+      <div class="container">
+        <p class="legal-note center">* Ipi는 진단·치료·처방을 제공하지 않으며, 증상 지속 시 전문의 상담을 권장합니다.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo" class="sub-footer">
+    <div class="footer-inner">
+      <span class="f-text">© 2025 이피랑. All Rights Reserved.</span>
+      <a class="f-text" href="privacy.html">개인정보 처리방침</a>
+      <a class="f-text" href="terms.html">이용약관</a>
+      <a class="f-text" href="contact.html">고객센터</a>
+    </div>
+  </footer>
+
+  <script>
+    // 모바일 메뉴
+    document.addEventListener('DOMContentLoaded', function () {
+      const toggleBtn = document.querySelector('.menu-toggle');
+      const nav = document.querySelector('nav');
+
+      const setExpanded = (expanded) => {
+        toggleBtn.setAttribute('aria-expanded', expanded);
+        nav.classList.toggle('active', expanded);
+      };
+
+      if (toggleBtn && nav) {
+        toggleBtn.addEventListener('click', () => {
+          const isOpen = nav.classList.contains('active');
+          setExpanded(!isOpen);
+        });
+      }
+
+      nav?.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+          if (window.innerWidth <= 1024) setExpanded(false);
+        });
+      });
+    });
+  </script>
+
+  <style>
+    /* Sub page look & feel (scoped overrides) */
+    body.sub-page{ color:#111; background:#fff; }
+    .sub-header{ border-bottom:1px solid rgba(0,0,0,.06); }
+    .sub-footer{ border-top:1px solid rgba(0,0,0,.06); }
+
+    /* Bands (clear area separation) */
+    .band{ padding: 48px 0; }
+    .band-gray{ background:#f7f7f8; }
+    .band-white{ background:#fff; }
+    .section{ padding: 48px 0; }
+    .section-title{ font-size: clamp(22px, 4.5vw, 28px); margin-bottom: 16px; }
+    .section-divider{ height: 12px; background: linear-gradient(90deg,#eee,#f7f7f8); }
+
+    /* Typographic overrides */
+    .page-title{ font-size: clamp(28px, 6vw, 44px); margin: 0 0 .5rem; color:#111; }
+    .lead{ color:#222; }
+
+    /* Cards & grids */
+    .biz-items{ display:grid; gap:16px; grid-template-columns:1fr; }
+    .biz-card{ background:#fff; border:1px solid rgba(0,0,0,.06); border-radius:16px; padding:16px; box-shadow:0 4px 12px rgba(0,0,0,.04); }
+    .product-grid{ display:grid; grid-template-columns:1fr; gap:16px; }
+    .product-card{ background:#fff; border:1px solid rgba(0,0,0,.06); border-radius:16px; padding:16px; box-shadow:0 4px 12px rgba(0,0,0,.04); }
+    .product-card img{ width:100%; height:auto; border-radius:12px; }
+
+    @media (min-width:768px){
+      .biz-items{ grid-template-columns: repeat(3,1fr); }
+      .product-grid{ grid-template-columns: repeat(3,1fr); }
+    }
+  </style>
 </body>
-
 </html>
-
-
-
-
-
