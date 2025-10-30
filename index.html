@@ -28,7 +28,15 @@
     </nav>
   </header>
 
-  <div class="wrap">
+  
+  <section class="hero">
+    <div>
+      <h1>나만을 위한 <span class="fx-highlight">맞춤 건강</span>,<br/>자연이 길러주는 <b><span class="fx-underline">나만의 건강 루틴</span></b></h1>
+      <p class="hero-desc">1분의 설문으로 시작하는 <b>개인 맞춤 모종 구독 서비스</b><br/>내 생활 패턴에 꼭 맞는 허브와 잎채소를 제안받고, 집에서도 나만의 <span style="color:#0A822A;font-weight:800">그린</span>을 만들어보세요.</p>
+    </div>
+  </section>
+  
+    <div class="wrap">
 		<div class="main-banner">
 			<div class="swiper mySwiper">
 				<div class="swiper-wrapper">
@@ -38,54 +46,113 @@
 			</div>
 		</div>
   </div>
-  
-  <section class="hero">
-    <div>
-      <h1>나만을 위한 <span class="fx-highlight">맞춤 건강</span>,<br/>자연이 길러주는 <b><span class="fx-underline">나만의 건강 루틴</span></b></h1>
-      <p class="hero-desc">1분의 설문으로 시작하는 <b>개인 맞춤 모종 구독 서비스</b><br/>내 생활 패턴에 꼭 맞는 허브와 잎채소를 제안받고, 집에서도 나만의 <span style="color:#0A822A;font-weight:800">그린</span>을 만들어보세요.</p>
-      <div class="promo-banner" aria-label="배너">
-        <div class="promo-inner">
-          <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?q=80&w=2000&auto=format&fit=crop" alt="이피랑 배너" />
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <section class="promo" aria-label="맞춤 모종 구독 프로모션">
-    <h2>개인 설문 기반 <b>맞춤 모종 구독</b></h2>
-    <p>신선한 유러피언 허브·잎채소를 <b>당신의 루틴에 맞춰</b> 제안하고 공급합니다. 단순 배송이 아닌 목표와 생활패턴을 반영한 <b>개인 맞춤형</b>구독입니다.</p>
-  </section>
+<section class="promo" aria-label="맞춤 모종 구독 프로모션">
+  <div class="promo-grid">
+    <div class="promo-text">
+      <h2>개인 설문 기반 <b>맞춤 모종 구독</b></h2>
+      <p>신선한 유러피언 허브·잎채소를 <b>당신의 루틴에 맞춰</b> 제안하고 공급합니다.<br>
+      단순 배송이 아닌 목표와 생활패턴을 반영한 <b>개인 맞춤형</b> 구독입니다.</p>
+    </div>
+
+    <div class="promo-img">
+      <div class="device-mock">
+        <img src="images/survey.png" alt="앱 설문 미리보기 화면" />
+      </div>
+      <small class="img-caption">앱에서 1분 설문 → 맞춤 모종 추천</small>
+    </div>
+  </div>
+</section>
+
 
   <!-- 데이터 추천(헬스테크) 섹션 -->
-  <section id="tech" class="tech" aria-label="데이터 주간 맞춤 추천">
- <div class="container">
-      <h2>내 기록으로 완성되는 <span class="c-brand">주간 맞춤 추천</span></h2>
-      <p class="lead">매일 <b>달력에 몸 상태</b>(수면·피로·기분·활동·섭취)를 간단히 체크하면, 일주일 단위로 기록을 정리해 <b>허브·잎채소 루틴</b>을 제안합니다. 복잡한 AI가 아니라, <b>명시적 규칙</b>과 <b>누적 통계</b>로 투명하게 작동해요.</p>
-      <div class="grid-3 tech-grid">
-        <div class="tcard">
-          <h3>일별 기록 → 캘린더</h3>
-          <div class="code">2025-10-21, 수면 6h, 피로 상, 활동 보통, 섭취 적음
-2025-10-22, 수면 7h, 피로 중, 활동 낮음, 섭취 보통
-2025-10-23, 수면 5h, 피로 상, 활동 낮음, 섭취 적음</div>
-        </div>
-        <div class="tcard">
-          <h3>주간 요약 지표 산출</h3>
-          <div class="code">주간 평균 수면 = 6.2h
-피로 지수 = 높음
-활동 지수 = 낮음
-섭취 균형 = 부족</div>
-        </div>
-        <div class="tcard">
-          <h3>규칙 기반 추천</h3>
-          <div class="code">IF 피로 지수 높음 AND 섭취 부족 →
-추천: 바질, 레몬밤, 버터헤드
-사유: 진정·기분균형 + 엽채 보충</div>
-        </div>
+<section class="tech-visual" aria-label="주간 맞춤 추천 (캘린더 + 데이터형)">
+  <div class="techv-grid">
+    <div class="techv-left">
+      <h3 class="techv-title">내 기록으로 완성되는 <b>주간 맞춤 추천</b></h3>
+      <p class="techv-lead">매일 캘린더에 <b>하루 상태를 기록</b>하면, 주간 통계를 기반으로 <b>명시적 규칙</b>에 따라 인사이트가 생성됩니다.<br> 피로, 수면, 섭취 균형 등 데이터를 시각적으로 한눈에 확인해보세요.</p>
+
+      <div class="device-mock">
+        <img src="images/calender.PNG" alt="달력 입력 화면 미리보기" />
       </div>
-      <div class="dotline"></div>
-      <p class="lead result">결과: 매주 <b>주간 리포트</b>와 함께 추천 조합·섭취 타이밍·간단 레시피를 제공합니다. 사용자는 기록만 남기면 되고, 기준과 사유는 <b>항상 확인</b>할 수 있어요.</p>
+      <small class="img-caption">달력 기록으로 맞춤형 루틴 완성</small>
     </div>
-  </section>
+
+<div class="techv-right" style="margin-top:150px;">
+      <div class="kcard k-summary">
+        <div class="khead">이번 주 건강 데이터 요약</div>
+        <ul class="kmetrics">
+          <li><span>몸무게</span><b class="tag good">정상</b></li>
+          <li><span>걸음수</span><b class="tag good">활발</b></li>
+          <li><span>근력운동</span><b class="tag warn">보통</b></li>
+          <li><span>심박수</span><b class="tag good">안정</b></li>
+          <li><span>혈당</span><b class="tag good">정상</b></li>
+          <li><span>혈압</span><b class="tag good">정상</b></li>
+          <li><span>물 섭취</span><b class="tag bad">부족</b></li>
+          <li class="memo"><span>컨디션</span><b class="tag warn">보통</b></li>
+        </ul>
+      </div>
+
+      <div class="kcard k-chart">
+        <div class="khead">주간 패턴</div>
+        <div class="chart-mock" id="weeklyChart">
+          <div class="bar steps" data-h="80%"></div>
+          <div class="bar workout" data-h="60%"></div>
+          <div class="bar hr" data-h="65%"></div>
+          <div class="bar water" data-h="50%"></div>
+        </div>
+        <small class="chart-label">걸음수 / 운동 / 심박수 / 물 섭취</small>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+.tech-visual{background:#fff; padding:100px 40px; border-top:1px solid #e6e6e6}
+.techv-grid{max-width:1160px; margin:0 auto; display:grid; grid-template-columns:.8fr 1.0fr; gap:32px; align-items:start}
+.techv-title{font-size:30px; margin:0 0 8px}
+.techv-lead{color:#404040; margin:0 0 18px; line-height:1.8}
+.device-mock.large{width:min(520px,100%); aspect-ratio:9/19; border:10px solid #111; border-radius:28px; background:#fff; overflow:hidden; box-shadow:0 18px 40px rgba(0,0,0,.15)}
+.device-mock.large img{width:100%; height:100%; object-fit:cover}
+
+.kcard{background:#f9fafb; border:1px solid #e6e6e6; border-radius:16px; padding:20px; box-shadow:0 6px 16px rgba(0,0,0,.05); margin-bottom:16px}
+.khead{font-weight:700; color:#075a36; margin-bottom:10px}
+.kmetrics{list-style:none; margin:0; padding:0; display:grid; grid-template-columns:1fr 1fr; gap:8px}
+.kmetrics li{display:flex; justify-content:space-between; align-items:center; background:#fff; border:1px solid #eaeaea; border-radius:12px; padding:10px 12px}
+.kmetrics .tag{padding:2px 8px; border-radius:999px; font-size:12px; border:1px solid #e6e6e6; min-width:52px; text-align:center}
+.kmetrics .tag.good{background:#e6f9ef; color:#0a7a4a}
+.kmetrics .tag.warn{background:#fff6dc; color:#946c00}
+.kmetrics .tag.bad{background:#ffe9e9; color:#b03a3a}
+
+.chart-mock{display:flex; align-items:flex-end; justify-content:space-between; gap:10px; height:210px; margin-top:10px}
+.chart-mock .bar{flex:1; border-radius:6px; background:#c8f5df; height:0; transition:height 900ms ease-out}
+.chart-mock .bar.steps{background:#cfefff}
+.chart-mock .bar.workout{background:#ffe6bf}
+.chart-mock .bar.hr{background:#fcd7d7}
+.chart-mock .bar.water{background:#9ee1c3}
+.chart-label{display:block; text-align:center; font-size:13px; color:#6a6a6a; margin-top:6px; margin-left:26px;}
+.chart-mock.played .bar{will-change:height}
+
+@media (max-width:900px){.techv-grid{grid-template-columns:1fr; gap:22px}}
+</style>
+
+<script>
+(function(){
+  const chart = document.getElementById('weeklyChart');
+  if(!chart) return;
+  const play = () => {
+    if(chart.classList.contains('played')) return;
+    chart.classList.add('played');
+    chart.querySelectorAll('.bar').forEach(bar=>{
+      const h = bar.getAttribute('data-h');
+      bar.style.height = h;
+    });
+  };
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting) { play(); io.disconnect(); } });
+  }, {threshold: 0.3});
+  io.observe(chart);
+})();
+</script>
 
   <section id="value" class="value">
     <div class="grid-3">
