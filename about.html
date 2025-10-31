@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <title>(주)이피랑 — About</title>
+<title>(주)이피랑</title>
   <link rel="stylesheet" href="styles.css" />
   <style>
   :root {
@@ -70,6 +70,44 @@
     .mission .card{background:#fff;border:1px solid var(--border);border-radius:18px;padding:22px;box-shadow:0 6px 16px rgba(0,0,0,.05);text-align:left}
     .mission .card h3{color:var(--brand);margin:0 0 8px}
     @media(max-width:1024px){.mission .cards{grid-template-columns:1fr}}
+	
+	.mission-pro{position:relative; overflow:hidden; background:linear-gradient(180deg,#ffffff, #f6fbf8)}
+.section-head{display:grid; gap:10px; justify-items:center; text-align:center}
+.section-head .sec-title{margin-bottom:6px}
+
+/* Accent stripe under the head */
+.accent{height:10px; width:140px; margin:14px auto 24px; border-radius:999px; background:linear-gradient(90deg,var(--leaf1),var(--leaf2),var(--leaf3)); box-shadow:0 8px 22px rgba(0,0,0,.06)}
+
+/* Cards */
+.cards-pro{margin-top:10px}
+.card-pro{position:relative; background:linear-gradient(180deg,#fdfefe,#f6fbf8); border-radius:18px; border:1px solid var(--border); padding:22px; box-shadow:0 10px 24px rgba(0,0,0,.06); transition:transform .28s ease, box-shadow .28s ease}
+.card-pro:hover{transform:translateY(-8px); box-shadow:0 14px 34px rgba(0,0,0,.09)}
+.card-pro:focus{outline: none}
+.card-pro:focus-visible{box-shadow:0 0 0 4px color-mix(in oklab, var(--brand) 28%, transparent)}
+
+.card-top{display:flex; align-items:center; justify-content:space-between; margin-bottom:10px}
+.badge{display:inline-flex; align-items:center; justify-content:center; width:42px; height:42px; border-radius:50%; background:var(--brand-100); color:var(--brand-700); font-weight:900}
+.icon{display:inline-flex; align-items:center; justify-content:center; width:42px; height:42px; border-radius:12px; background:linear-gradient(135deg,#e9f6ef,#cfefff); color:var(--brand-700)}
+
+.card-pro h3{margin:6px 0 6px; font-size:18px; letter-spacing:-.2px}
+.card-pro p{color:var(--ink-600); line-height:1.75}
+
+/* Small chips */
+.chips{display:flex; gap:8px; margin-top:12px}
+.chips span{font-size:12px; padding:6px 10px; border-radius:999px; background:#fff; border:1px solid var(--border); color:var(--ink-600)}
+
+/* Background particles */
+.mission-bg.pro{position:absolute; inset:0; pointer-events:none}
+.mission-bg.pro .dot{position:absolute; width:220px; height:220px; border-radius:50%; filter:blur(18px); opacity:.5}
+.mission-bg.pro .d1{left:-60px; top:-40px; background:radial-gradient(circle at 30% 30%, var(--leaf1), transparent 58%)}
+.mission-bg.pro .d2{right:-80px; top:10%; background:radial-gradient(circle at 50% 50%, var(--leaf3), transparent 58%)}
+.mission-bg.pro .d3{left:22%; bottom:-120px; background:radial-gradient(circle at 40% 40%, var(--leaf4), transparent 58%)}
+
+/* Responsive tweaks consistent with existing breakpoints */
+@media(max-width:1024px){
+  .icon{width:38px; height:38px}
+  .badge{width:38px; height:38px}
+}
 
     /* Story timeline */
     .timeline{position:relative}
@@ -146,26 +184,65 @@
 
 
   <!-- Mission / Vision -->
-  <section class="mission">
-    <div class="wrap">
+<section class="mission mission-pro">
+  <div class="wrap">
+    <div class="section-head">
       <h2 class="sec-title">우리가 하는 일</h2>
-      <p class="lead">설문으로 개인에게 맞는 모종을 추천하고, 집에서 바로 키워 섭취할 수 있도록 <b>소형 스마트팜</b>과 <b>라이브 플러그(육묘) 정기공급</b>을 제공합니다. 복잡한 기술보다 <b>투명한 기준</b>과 <b>꾸준한 루틴</b>을 중시합니다.</p>
-      <div class="cards">
-        <div class="card">
-          <h3>설문</h3>
-          <p>온보딩 설문으로 목표·습관·알레르기·복용 성분 등을 파악하고, 결과에 맞춘 원물 세트와 루틴을 제안합니다.</p>
-        </div>
-        <div class="card">
-          <h3>스마트팜</h3>
-          <p>탁상형/수직형 폼팩터에 식물용 LED·펌프·양액 구동을 결합한 가정용 미니팜으로, 신선한 수확을 돕습니다.</p>
-        </div>
-        <div class="card">
-          <h3>라이브 플러그</h3>
-          <p>품목별 최적 매체로 육묘한 플러그를 정기 구독으로 공급합니다. 도착 후 48시간 적응 SOP와 활착 보증을 제공합니다.</p>
-        </div>
-      </div>
+      <p class="lead">설문 → 추천 → 재배 → 섭취의 루틴을 기반으로, <b>소형 스마트팜</b>과 <b>라이브 플러그 정기공급</b>을 제공합니다.</p>
     </div>
-  </section>
+
+    <div class="accent" aria-hidden="true"></div>
+
+    <div class="cards grid-3 cards-pro">
+      <!-- Card 1 -->
+      <article class="card card-pro" tabindex="0">
+        <div class="card-top">
+          <span class="badge">01</span>
+          <div class="icon">
+            <!-- inline SVG to avoid missing assets -->
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 5h16M4 10h16M4 15h9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="18" cy="15" r="3.2" stroke="currentColor" stroke-width="1.6"/><path d="M18 13.4v1.8l1.2 1.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </div>
+        </div>
+        <h3>설문</h3>
+        <p>온보딩 설문으로 목표·습관·알레르기·복용 성분 등을 파악하고, 결과에 맞춘 원물 세트와 루틴을 제안합니다.</p>
+        <div class="chips"><span>맞춤 추천</span><span>루틴 설계</span></div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="card card-pro" tabindex="0">
+        <div class="card-top">
+          <span class="badge">02</span>
+          <div class="icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17h10M5 9h14M8 13h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M12 3c-2 2-3 4-3 6a3 3 0 0 0 6 0c0-2-1-4-3-6Z" fill="currentColor" opacity=".15"/><circle cx="12" cy="9" r="2.6" stroke="currentColor" stroke-width="1.4"/></svg>
+          </div>
+        </div>
+        <h3>스마트팜</h3>
+        <p>탁상형/수직형 폼팩터에 식물용 LED·펌프·양액 구동을 결합한 가정용 미니팜으로, 신선한 수확을 돕습니다.</p>
+        <div class="chips"><span>LED/양액</span><span>소형 폼팩터</span></div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="card card-pro" tabindex="0">
+        <div class="card-top">
+          <span class="badge">03</span>
+          <div class="icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 19h12M7 9c2-2 4-3 5-3s3 1 5 3v3c0 3-2 7-5 7s-5-4-5-7V9Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M9.5 12.5c1 .6 2 .9 2.5.9s1.5-.3 2.5-.9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </div>
+        </div>
+        <h3>라이브 플러그</h3>
+        <p>품목별 최적 매체로 육묘한 플러그를 정기 구독으로 공급합니다. 도착 후 48시간 적응 SOP와 활착 보증을 제공합니다.</p>
+        <div class="chips"><span>정기공급</span><span>활착 보증</span></div>
+      </article>
+    </div>
+  </div>
+
+  <!-- Subtle background particles -->
+  <div class="mission-bg pro" aria-hidden="true">
+    <span class="dot d1"></span>
+    <span class="dot d2"></span>
+    <span class="dot d3"></span>
+  </div>
+</section>
 
   <!-- Story / Timeline -->
   <section class="timeline" id="story">
