@@ -38,15 +38,15 @@ header .logo-img{height:48px; width:auto; display:block}
 /* Promo text */
 .promo{background:linear-gradient(90deg,#e9f6ef,#e9f6ff); padding:50px 40px; text-align:center}
 .promo h2{font-size:clamp(32px,5vw,48px); margin-bottom:24px; color:var(--brand-700)}
-.promo p{max-width:880px; margin:0 auto; line-height:1.9; color:var(--ink-600); font-size:18px}
+.promo p{max-width:880px; margin:0 auto; line-height:1.9; color:var(--ink-600); font-size:clamp(15px,4vw,20px)}
 .promo-grid{
   max-width:1120px; margin:0 auto; display:grid;
-  grid-template-columns: 1.1fr .9fr; gap:36px; align-items:center;
+  grid-template-columns: 1.2fr .9fr; gap:36px; align-items:center;
   padding:100px 40px; background:linear-gradient(90deg,#e9f6ef,#e9f6ff);
   border-radius:24px;
 }
 .promo-text p{margin-bottom:18px; line-height:1.8; color:#404040;}
-.promo-text h2{color:#075a36; font-size:clamp(25px,5vw,42px); margin-bottom:18px;}
+.promo-text h2{color:#075a36; font-size:clamp(25px,5vw,42px); margin-bottom:30px;}
 .promo-img{display:flex; flex-direction:column; align-items:center}
 .device-mock{
   width:min(322px,100%); aspect-ratio:9/17;
@@ -160,6 +160,7 @@ footer small{color:var(--ink-400); font-size:14px}
   .v-card p{ line-height:1.7; } 
   .grid-3{grid-template-columns:1fr}
    .leaf.l3{left:-14%; bottom:-20px; animation:float3 14s ease-in-out infinite}
+	  .promo-text p {width:257px;}
 }
 
 /* Mobile nav & layout (<=1024px) */
