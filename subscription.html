@@ -8,35 +8,6 @@
   <title>(주)이피랑</title>
   <link rel="stylesheet" href="styles.css" />
   <style>
-  .sub-banner {
-  height: 340px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(180deg, #e9f6ef 0%, #f5fbf8 100%);
-  text-align: center;
-  overflow: hidden;
-  position: relative;
-}
-.sub-banner h1 {
-  font-size: clamp(26px, 4vw, 38px);
-  font-weight: 800;
-  letter-spacing: -0.5px;
-  animation: fadeSlide 2.5s ease-in-out;
-}
-.sub-banner h1 span {
-  color: #000;
-  animation: pulse 3s infinite;
-}
-@keyframes fadeSlide {
-  0% {opacity: 0; transform: translateY(30px);}
-  100% {opacity: 1; transform: translateY(0);}
-}
-@keyframes pulse {
-  0%, 100% {color: var(--brand);}
-  50% {color: #3ab67a;}
-}
-
 section.intro {
   background: #fff;
   padding: 100px 20px;
@@ -166,6 +137,31 @@ section.intro p {
 .cta a:hover {
   background: #075a36;
 }
+/* 태블릿: 2열 */
+@media (max-width:1024px){
+  .benefit-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .benefit { padding: 32px; }
+}
+
+/* 모바일: 1열 (세로 정렬) */
+@media (max-width:680px){
+  .benefits { padding: 70px 16px; } /* 여백 축소 */
+  .benefit-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .benefit {
+    padding: 24px;
+    text-align: left;
+  }
+  .benefit h4 {
+    font-size: clamp(18px, 5vw, 20px);
+  }
+  .step {padding:30px;}
+}
 </style>
 </head>
 <body>
@@ -179,10 +175,9 @@ section.intro p {
     </button>
     <nav id="global-nav">
       <ul>
-        <li><a href="#value">웰니스</a></li>
+        <li><a href="about.html">소개</a></li>
+		<li><a href="well.html">웰니스</a></li>
         <li><a href="subscription.html">구독 안내</a></li>
-        <li><a href="#how">진행 방식</a></li>
-        <li><a href="location.html">Location</a></li>
         <li><a href="https://noonnoonanna.github.io/eprang_app/intro.html" target="_blank" rel="noopener">앱 열기</a></li>
       </ul>
     </nav>
@@ -300,5 +295,13 @@ section.intro p {
   <footer>
     © 2025 이피랑. All rights reserved.
   </footer>
+  
+    <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.getElementById('global-nav');
+    function setExpanded(on){ if(!toggle||!nav) return; toggle.setAttribute('aria-expanded', on ? 'true' : 'false'); nav.classList.toggle('open', !!on); document.body.classList.toggle('nav-open', !!on);}    
+    if(toggle){ toggle.addEventListener('click', ()=>{ const isOpen = nav.classList.contains('open'); setExpanded(!isOpen); }); }
+    document.querySelectorAll('#global-nav a').forEach(a=>a.addEventListener('click', ()=> setExpanded(false)));
+  </script>
 </body>
 </html>
