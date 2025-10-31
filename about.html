@@ -8,10 +8,60 @@
   <title>(주)이피랑 — About</title>
   <link rel="stylesheet" href="styles.css" />
   <style>
+  :root {
+  --leafA:#bfead5;
+  --leafB:#dff6ea;
+  --leafC:#cfe6ff;
+  --leafD:#ffe3b0;
+}
+.sub-banner.leaf {
+  position: relative;
+  height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: radial-gradient(1000px 520px at 15% 25%, #f3fbf7 0%, #ffffff 60%);
+  overflow: hidden;
+}
+.sub-banner.leaf h1 {
+  font-size: clamp(26px, 4vw, 38px);
+  font-weight: 800;
+  letter-spacing: -0.3px;
+  position: relative;
+  z-index: 2;
+}
+.sub-banner.leaf h1 span {
+  color: var(--brand);
+}
+.leafy {
+  position: absolute;
+  opacity: 0.8;
+  filter: blur(0.1px);
+  pointer-events: none;
+}
+.leafy svg {display: block;}
+.leafy.a {left: 8%; top: 10%; animation: sway1 9s ease-in-out infinite;}
+.leafy.b {right: 10%; top: 20%; animation: sway2 11s ease-in-out infinite;}
+.leafy.c {left: 20%; bottom: -10px; animation: sway3 13s ease-in-out infinite;}
+.leafy.d {right: 24%; bottom: -8px; animation: sway1 10s 1s ease-in-out infinite;}
+@keyframes sway1 {0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-14px) rotate(4deg)}}
+@keyframes sway2 {0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-20px) rotate(-5deg)}}
+@keyframes sway3 {0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-12px) rotate(6deg)}}
+@media(max-width:680px){
+  .sub-banner.leaf{height:340px; background: radial-gradient(800px 300px at 50% 40%, #f5fbf8 0%, #ffffff 80%);}  
+  .leafy{opacity:0.65; filter:blur(0.3px);}  
+  .leafy svg{transform:scale(0.8);}  
+  .leafy.a{left:-7%; top:6%;}
+  .leafy.b{right:4%; top:10%;}
+  .leafy.c{left:2%; bottom:-2%;}
+  .leafy.c svg{width:150px; height:150px;}
+  .leafy.d{right:12%; bottom:-4%;}
+}
     /* Section base */
     .wrap{max-width:1100px;margin:0 auto}
     section{padding:80px 20px;border-top:1px solid var(--border);background:#fff}
-    h2.sec-title{font-size:28px;margin:0 0 12px}
+    h2.sec-title{font-size:25px;margin:0 0 12px;text-align:center;}
     p.lead{line-height:1.9;color:#333;max-width:930px}
 
     /* Mission */
@@ -65,27 +115,52 @@
     </nav>
   </header>
 
-  <!-- Sub Banner same skeleton -->
-  <section class="sub-banner">
-    <h1><span>ABOUT EPRANG</span></h1>
-  </section>
+  <!-- Sub Banner same skeleton -->  
+<section class="sub-banner leaf">
+  <h1><span>ABOUT EPRANG</span></h1>
+  <div class="leafy a" aria-hidden="true">
+    <svg width="140" height="160" viewBox="0 0 140 160" fill="none">
+      <path d="M70 10C40 40 30 70 40 100c10 30 40 40 70 20 30-20 40-60 20-90-10-20-30-30-60-20z" fill="#6ebf73"/>
+      <path d="M70 20c-2 30 6 70-10 100M70 20c12 22 32 34 52 42" stroke="#0a7a4a66" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+  </div>
+  <div class="leafy b" aria-hidden="true">
+    <svg width="130" height="170" viewBox="0 0 130 170" fill="none">
+      <path d="M80 8C56 28 36 52 36 80s20 60 56 56c28-4 44-36 34-66-8-22-26-44-46-62z" fill="#5aad63"/>
+      <path d="M68 30c2 36-4 72-14 104M68 30c10 20 30 36 50 46" stroke="#0a7a4a66" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+  </div>
+  <div class="leafy c" aria-hidden="true">
+    <svg width="190" height="180" viewBox="0 0 150 180" fill="none">
+      <path d="M90 10C60 36 46 64 50 96c4 32 32 56 68 48s54-44 38-78c-10-22-30-40-66-56z" fill="#78c274"/>
+      <path d="M88 28c0 32-4 66-14 96M88 28c12 18 34 32 56 42" stroke="#0a7a4a66" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+  </div>
+  <div class="leafy d" aria-hidden="true">
+    <svg width="120" height="150" viewBox="0 0 120 150" fill="none">
+      <path d="M68 6C46 28 34 48 34 70s14 44 38 44c26 0 44-22 42-48-2-24-18-46-46-66z" fill="#8dd781"/>
+      <path d="M64 22c2 28-4 58-10 84M64 22c10 18 30 32 48 40" stroke="#0a7a4a66" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+  </div>
+</section>
+
 
   <!-- Mission / Vision -->
   <section class="mission">
     <div class="wrap">
       <h2 class="sec-title">우리가 하는 일</h2>
-      <p class="lead">설문으로 개인에게 맞는 원물을 추천하고, 집에서 바로 키워 섭취할 수 있도록 <b>소형 스마트팜</b>과 <b>라이브 플러그(육묘) 정기공급</b>을 제공합니다. 복잡한 기술보다 <b>투명한 기준</b>과 <b>꾸준한 루틴</b>을 중시합니다.</p>
+      <p class="lead">설문으로 개인에게 맞는 모종을 추천하고, 집에서 바로 키워 섭취할 수 있도록 <b>소형 스마트팜</b>과 <b>라이브 플러그(육묘) 정기공급</b>을 제공합니다. 복잡한 기술보다 <b>투명한 기준</b>과 <b>꾸준한 루틴</b>을 중시합니다.</p>
       <div class="cards">
         <div class="card">
-          <h3>IpiCare 설문 App</h3>
+          <h3>설문</h3>
           <p>온보딩 설문으로 목표·습관·알레르기·복용 성분 등을 파악하고, 결과에 맞춘 원물 세트와 루틴을 제안합니다.</p>
         </div>
         <div class="card">
-          <h3>IpiGrow 스마트팜</h3>
+          <h3>스마트팜</h3>
           <p>탁상형/수직형 폼팩터에 식물용 LED·펌프·양액 구동을 결합한 가정용 미니팜으로, 신선한 수확을 돕습니다.</p>
         </div>
         <div class="card">
-          <h3>IpiNursery 라이브 플러그</h3>
+          <h3>라이브 플러그</h3>
           <p>품목별 최적 매체로 육묘한 플러그를 정기 구독으로 공급합니다. 도착 후 48시간 적응 SOP와 활착 보증을 제공합니다.</p>
         </div>
       </div>
@@ -151,4 +226,3 @@
   </script>
 </body>
 </html>
-

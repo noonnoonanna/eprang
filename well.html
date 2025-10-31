@@ -10,23 +10,26 @@
   <style>
   /* Intro */
   section.intro{background:#f7f9f8;padding:100px 20px;text-align:center}
-  section.intro h2{font-size:28px;margin-bottom:16px}
+  section.intro h2{font-size:25px;margin-bottom:16px}
   section.intro p{max-width:880px;margin:0 auto;line-height:1.9;color:#333}
-
-  /* Wellness Pillars */
-  .pillars{background:#ffffff;padding:80px 20px;border-top:1px solid var(--border)}
-  .pillars .wrap{max-width:1100px;margin:0 auto;text-align:center}
-  .pillars h2{font-size:28px;margin:0 0 12px}
-  .pillar-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:24px}
-  .pillar{background:#fff;border:1px solid var(--border);border-radius:20px;padding:32px;box-shadow:0 8px 22px rgba(0,0,0,.06);text-align:left}
-  .pillar h3{margin:0 0 8px;color:var(--brand)}
-  .pillar p{color:#444;line-height:1.8}
-  @media(max-width:1024px){.pillar-grid{grid-template-columns:1fr}}
-
+  
+      /* ---------- Why Wellness cards with gentle hover (enhanced) ---------- */
+.why{padding:100px 20px; background:radial-gradient(800px 240px at 15% -10%, #f0fbf6 12%, transparent 60%), radial-gradient(800px 240px at 85% 110%, #eef6ff 12%, transparent 60%), #ffffff}
+ .why .wrap{max-width:1000px;margin:0 auto;text-align:center} .why h2{font-size:28px;margin:0 0 12px} 
+ .why .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:24px} 
+ .why .card{position:relative;background:linear-gradient(180deg,#ffffff,#f7faf8);border:1px solid var(--border);border-radius:18px;padding:40px 24px;box-shadow:0 8px 22px rgba(0,0,0,.05);overflow:hidden;opacity:0;transform:translateY(8px);transition:transform .5s ease,opacity .5s ease, box-shadow .3s ease; min-height:260px;display:flex;flex-direction:column;justify-content:flex-start;} 
+ .why .card.in{transform:translateY(0);opacity:1} 
+ .why .card::before{content:"";position:absolute;inset:-2px; border-radius:20px; padding:1px; background:linear-gradient(135deg,#c8f5df,#cfefff,#ffe6bf); 
+	-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0); -webkit-mask-composite:xor; mask-composite:exclude;} 
+ .why .card::after{content:"";position:absolute;inset:auto -20% -40% -20%;height:120px;background:radial-gradient(200px 60px at 50% 0,#e9f6ef 8%,transparent 70%);opacity:.9;transition:transform .6s ease} 
+ .why .card:hover{box-shadow:0 14px 28px rgba(0,0,0,.08)}
+ .why .card:hover::after{transform:translateY(-10px)} 
+ .why .card .chip{position:absolute;top:12px;right:12px;background:#0a7a4a10;border:1px solid #0a7a4a22;color:#0a7a4a;font-weight:700;font-size:12px;border-radius:999px;padding:6px 9px} /* 아이콘과 제목 한 줄 정렬 */ .why .card-header{display:flex;align-items:center;gap:10px;margin-bottom:8px} .why .card-header .icon{width:40px;height:40px;border-radius:10px;background:#ffffff;display:flex;align-items:center;justify-content:center;box-shadow:inset 0 0 0 1px var(--border)} .why .card-header h3{color:var(--brand);margin:0;font-size:18px;display:flex;align-items:center;} .why .card p{color:#444;line-height:1.8;margin:0;margin-top:10px} @media(max-width:1024px){.why .grid{grid-template-columns:repeat(2,1fr)}} @media(max-width:680px){.why .grid{grid-template-columns:1fr;gap:14px}.why .card{padding:24px}.why .card-header .icon{width:36px;height:36px}}
+.why h3 {color:var(--brand)}
   /* Routine Loop */
   .loop{background:#fff;padding:80px 20px;border-top:1px solid var(--border)}
   .loop .wrap{max-width:1100px;margin:0 auto;text-align:center}
-  .loop h2{font-size:28px;margin:0 0 12px}
+  .loop h2{font-size:25px;margin:0 0 12px}
   .loop-steps{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:24px}
   .lstep{position:relative;background:linear-gradient(180deg,#fdfefe,#f6fbf8);border:1px solid var(--border);border-radius:16px;padding:20px;box-shadow:0 6px 16px rgba(0,0,0,.05)}
   .lstep b{display:block;margin-bottom:6px}
@@ -34,6 +37,30 @@
   .lstep::after{content:'➔';position:absolute;right:-10px;top:50%;transform:translateY(-50%);color:var(--ink-400)}
   .lstep:last-child::after{display:none}
   @media(max-width:1024px){.loop-steps{grid-template-columns:1fr}.lstep::after{display:none}}
+
+
+.pillars{padding:100px 20px;background:radial-gradient(800px 240px at 20% -10%, #f5fcf8 12%, transparent 60%), radial-gradient(800px 240px at 80% 110%, #f0f8ff 12%, transparent 60%), #ffffff;text-align:center;border-top:1px solid var(--border)}
+.pillars .wrap{max-width:1000px;margin:0 auto}
+.pillars h2{font-size:25px;margin-bottom:60px;position:relative}
+.pillar-grid{display:flex;justify-content:space-between;align-items:center;position:relative;gap:12px;text-align:left}
+.pillar{flex:1;background:linear-gradient(180deg,#ffffff,#f7faf8);border-radius:18px;padding:28px 24px;box-shadow:0 8px 22px rgba(0,0,0,.05);transition:transform .4s ease, box-shadow .4s ease;opacity:0;transform:translateY(12px);position:relative;z-index:2}
+.pillar.in{opacity:1;transform:translateY(0)}
+.pillar:hover{transform:translateY(-6px);box-shadow:0 14px 28px rgba(0,0,0,.08)}
+.pillar-header{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.pillar .icon{width:42px;height:42px;border-radius:50%;background:#ffffff;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 2px #e6e6e6;transition:background .3s ease, transform .3s ease}
+.pillar:hover .icon{transform:scale(1.1)}
+.pillar h3{margin:0;color:var(--brand);font-size:18px;font-weight:700}
+.pillar p{color:#444;line-height:1.8;margin:0;margin-top:10px}
+
+/* 연결 라인 + 도트 */
+.connector{flex:0 0 80px;height:4px;background:linear-gradient(90deg,#c8f5df,#cfefff,#ffe6bf);border-radius:4px;position:relative;z-index:1;animation:flow 3s linear infinite;background-size:200% auto;display:flex;align-items:center;justify-content:center}
+.connector .dot{width:14px;height:14px;background:#0a7a4a;border-radius:50%;box-shadow:0 0 10px rgba(10,122,58,0.3);animation:pulseDot 1.8s ease-in-out infinite}
+@keyframes flow{0%{background-position:0% 50%}100%{background-position:200% 50%}}
+@keyframes pulseDot{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.4);opacity:.7}}
+
+@media(max-width:1024px){.pillar-grid{flex-direction:column;gap:40px}.connector{width:4px;height:60px;background:linear-gradient(180deg,#c8f5df,#cfefff,#ffe6bf)}.connector .dot{position:absolute;top:calc(50% - 7px);left:calc(50% - 7px)}}
+@media(max-width:680px){.pillar{padding:24px}.pillar .icon{width:36px;height:36px}}
+
 
   /* CTA */
   .cta{padding:100px 20px;text-align:center;background:linear-gradient(90deg,#e9f6ef,#e9f6ff);border-top:1px solid var(--border)}
@@ -59,15 +86,27 @@
     </nav>
   </header>
 
-  <!-- Sub Banner : keep same skeleton -->
-  <section class="sub-banner">
-    <h1>자연이 길러주는 <span>웰니스 루틴</span> — 나에게 <span>맞춤</span>으로</h1>
+  <!-- Sub Banner : keep same skeleton -->  
+    <section class="sub-banner nature">
+    <h1>자연이 길러주는 <span>웰니스</span>, 일상에 스며들다</h1>
+    <div class="leaf l1" aria-hidden="true">
+      <svg width="120" height="120" viewBox="0 0 120 120" fill="none"><path d="M80 10C52 38 36 50 36 74c0 20 16 36 36 36s36-16 36-36c0-24-16-36-28-64z" fill="var(--leaf1)"/></svg>
+    </div>
+    <div class="leaf l2" aria-hidden="true">
+      <svg width="110" height="110" viewBox="0 0 110 110" fill="none"><path d="M70 8C50 28 34 40 34 60a36 36 0 1072 0c0-20-10-30-36-52z" fill="var(--leaf2)"/></svg>
+    </div>
+    <div class="leaf l3" aria-hidden="true">
+      <svg width="140" height="140" viewBox="0 0 140 140" fill="none"><path d="M98 12C70 40 54 52 54 76a40 40 0 1080 0c0-24-12-34-36-64z" fill="var(--leaf3)"/></svg>
+    </div>
+    <div class="leaf l4" aria-hidden="true">
+      <svg width="100" height="100" viewBox="0 0 100 100" fill="none"><path d="M70 8C50 28 34 40 34 60a30 30 0 1060 0c0-20-10-28-24-52z" fill="var(--leaf4)"/></svg>
+    </div>
   </section>
 
   <!-- What is Wellness section -->
   <section class="what-is-wellness" style="background:#fff;padding:80px 20px;border-top:1px solid var(--border);text-align:center">
     <div class="wrap" style="max-width:1000px;margin:0 auto;">
-      <h2 style="font-size:28px;margin-bottom:16px;">웰니스란 무엇일까요?</h2>
+      <h2 style="font-size:25px;margin-bottom:16px;">웰니스란 무엇일까요?</h2>
       <p style="line-height:1.9;color:#333;max-width:880px;margin:0 auto 40px;">
         ‘웰니스(Wellness)’는 <b>웰빙(Well-being), 행복(Happiness), 건강(Fitness)</b>이 어우러진 개념으로,<br>
 <b>신체적·정신적·감정적 균형</b>을 이루며 <b>전반적인 삶의 질을 향상시키는 것</b>을 목표로 합니다.<br>
@@ -98,55 +137,85 @@
        집에서 직접 키워 먹는 경험은 자연스럽게 꾸준함을 만들고, 주간 리포트로 진행 상황을 확인할 수 있습니다.</p>
   </section>
 
-  <!-- Why Wellness section -->
-  <section class="why-wellness" style="background:#ffffff;padding:80px 20px;border-top:1px solid var(--border);text-align:center">
-    <div class="wrap" style="max-width:1000px;margin:0 auto;">
-      <h2 style="font-size:28px;margin-bottom:16px;">왜 웰니스를 해야 할까요?</h2>
-      <p style="line-height:1.9;color:#333;max-width:880px;margin:0 auto 40px;">
-        웰니스는 단기간의 다이어트나 운동이 아니라, <b>꾸준한 회복 루틴</b>을 만드는 과정입니다.<br>
-        작은 변화가 쌓이면 몸의 리듬과 마음의 안정이 회복되고, 일상 속 에너지가 달라집니다.
-      </p>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;text-align:left;">
-        <div style="background:#f8fcf9;border:1px solid #e6e6e6;border-radius:16px;padding:16px;box-shadow:0 6px 16px rgba(0,0,0,.05);">
-          <h3 style="margin-top:0;color:var(--brand)">01. 스트레스 완화</h3>
-          <p style="margin:0;color:#444;">자연 향과 섭취 루틴을 통해 신경계가 안정되고, 수면 질이 개선됩니다.</p>
-        </div>
-        <div style="background:#f8fcf9;border:1px solid #e6e6e6;border-radius:16px;padding:16px;box-shadow:0 6px 16px rgba(0,0,0,.05);">
-          <h3 style="margin-top:0;color:var(--brand)">02. 집중력 향상</h3>
-          <p style="margin:0;color:#444;">허브의 향기와 루틴화된 섭취는 인지 집중과 업무 효율을 높여줍니다.</p>
-        </div>
-        <div style="background:#f8fcf9;border:1px solid #e6e6e6;border-radius:16px;padding:16px;box-shadow:0 6px 16px rgba(0,0,0,.05);">
-          <h3 style="margin-top:0;color:var(--brand)">03. 면역력 & 신체 밸런스</h3>
-          <p style="margin:0;color:#444;">식이섬유와 미네랄이 풍부한 잎채소 섭취로 내부 밸런스를 유지합니다.</p>
-        </div>
-        <div style="background:#f8fcf9;border:1px solid #e6e6e6;border-radius:16px;padding:16px;box-shadow:0 6px 16px rgba(0,0,0,.05);">
-          <h3 style="margin-top:0;color:var(--brand)">04. 루틴의 힘</h3>
-          <p style="margin:0;color:#444;">매일의 기록과 피드백이 꾸준함을 만들고, 스스로의 변화에 확신을 줍니다.</p>
-        </div>
+  <!-- Why Wellness section -->  
+  <section class="why nature-why">
+    <div class="wrap">
+      <h2>왜 웰니스를 해야 할까요?</h2>
+      <p class="lead">작은 변화를 꾸준히 이어가면, 몸과 마음의 리듬이 회복됩니다. 자연의 리듬을 닮은 루틴으로 일상의 에너지를 되찾아보세요.</p>
+      <div class="grid">
+        <article class="card r1">
+          <span class="chip">01</span>
+          <div class="icon">
+            <svg width="35" height="35" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3c-3 3-6 5-6 9a6 6 0 1012 0c0-4-3-6-6-9z" fill="#9EE1C3"/></svg>
+          </div>
+          <h3>스트레스 완화</h3>
+          <p>편안한 향과 섭취 루틴으로 신경계를 안정시켜 <b>수면의 질</b>을 높입니다.</p>
+        </article>
+        <article class="card r2">
+          <span class="chip">02</span>
+          <div class="icon">
+            <svg width="35" height="35" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="#7EC5FF" stroke-width="2"/><path d="M8 12h8M12 8v8" stroke="#7EC5FF" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3>집중력 향상</h3>
+          <p>상쾌한 허브가 맑은 컨디션을 도와 <b>몰입도</b>를 높입니다.</p>
+        </article>
+        <article class="card r3">
+          <span class="chip">03</span>
+          <div class="icon">
+            <svg width="35" height="35" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 13c2 0 3-2 5-2s3 2 5 2 3-2 5-2" stroke="#FFC97A" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3>면역·밸런스</h3>
+          <p>잎채소의 섬유·미네랄로 내부 <b>균형 유지</b>와 회복력을 기릅니다.</p>
+        </article>
+        <article class="card r4">
+          <span class="chip">04</span>
+          <div class="icon">
+            <svg width="35" height="35" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 7h12M6 12h12M6 17h8" stroke="#79D0A8" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3>꾸준한 루틴</h3>
+          <p>기록과 피드백으로 <b>지속 가능한 습관</b>을 만듭니다.</p>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- Wellness pillars -->
-  <section class="pillars">
-    <div class="wrap">
-      <h2>웰니스를 이루는 세 가지 축</h2>
-      <div class="pillar-grid">
-        <article class="pillar">
-          <h3>① 맞춤 추천</h3>
-          <p>온보딩 설문과 간단한 기록을 바탕으로, 당신에게 맞는 허브·잎채소 조합을 투명한 규칙으로 추천합니다.</p>
-        </article>
-        <article class="pillar">
-          <h3>② 재배 & 섭취 루틴</h3>
-          <p>미니 스마트팜과 라이브 플러그(육묘) 정기공급으로, 신선한 그린을 집에서 길러 바로 섭취합니다.</p>
-        </article>
-        <article class="pillar">
-          <h3>③ 피드백 리포트</h3>
-          <p>주간 요약과 근거(규칙/지표)를 제공해, 변화의 방향을 이해하고 다음 주 루틴을 조정합니다.</p>
-        </article>
-      </div>
+  <!-- Wellness pillars -->  
+<section class="pillars nature connected">
+  <div class="wrap">
+    <h2>당신을 위한 이피랑의 웰니스 밸런스</h2>
+    <div class="pillar-grid">
+      <article class="pillar step1">
+        <div class="pillar-header">
+          <div class="icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 2a10 10 0 1010 10A10 10 0 0012 2zm0 15a1.5 1.5 0 111.5-1.5A1.5 1.5 0 0112 17zm1-4h-2V7h2z" fill="#74C69D"/></svg>
+          </div>
+          <h3>맞춤 추천</h3>
+        </div>
+        <p>온보딩 설문과 간단한 기록을 바탕으로, 당신에게 맞는 허브·잎채소 조합을 투명한 규칙으로 추천합니다.</p>
+      </article>
+      <div class="connector"><span class="dot"></span></div>
+      <article class="pillar step2">
+        <div class="pillar-header">
+          <div class="icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 2l3 7h7l-5.5 4 2 7L12 17l-6.5 3 2-7L2 9h7z" fill="#F9C74F"/></svg>
+          </div>
+          <h3>재배 & 섭취 루틴</h3>
+        </div>
+        <p>미니 스마트팜과 라이브 플러그(육묘) 정기공급으로, 신선한 그린을 집에서 길러 바로 섭취합니다.</p>
+      </article>
+      <div class="connector"><span class="dot"></span></div>
+      <article class="pillar step3">
+        <div class="pillar-header">
+          <div class="icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 11-3.8-11.4" stroke="#43AA8B" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><polyline points="22 4 12 14.01 9 11.01" stroke="#43AA8B" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>피드백 리포트</h3>
+        </div>
+        <p>주간 요약과 근거(규칙/지표)를 제공해, 변화의 방향을 이해하고 다음 주 루틴을 조정합니다.</p>
+      </article>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- Routine loop diagram style -->
   <section class="loop" id="loop">
@@ -176,6 +245,20 @@
     function setExpanded(on){ if(!toggle||!nav) return; toggle.setAttribute('aria-expanded', on ? 'true' : 'false'); nav.classList.toggle('open', !!on); document.body.classList.toggle('nav-open', !!on);}    
     if(toggle){ toggle.addEventListener('click', ()=>{ const isOpen = nav.classList.contains('open'); setExpanded(!isOpen); }); }
     document.querySelectorAll('#global-nav a').forEach(a=>a.addEventListener('click', ()=> setExpanded(false)));
+  </script>
+    <script>
+    // Intersection Observer for reveal animations
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    },{threshold:0.12});
+    document.querySelectorAll('.why .card, .pillar').forEach(el=>io.observe(el));
+  </script>
+  <script>
+    // 기존 리빌 + what 섹션 카드도 관측
+    const io2 = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io2.unobserve(e.target);} });
+    },{threshold:0.12});
+    document.querySelectorAll('.what .card, .why .card, .pillar').forEach(el=>io2.observe(el));
   </script>
 </body>
 </html>

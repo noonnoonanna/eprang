@@ -1,4 +1,5 @@
-:root{ --brand:#0a7a4a; --brand-700:#075a36; --brand-100:#e9f6ef; --ink:#121212; --ink-600:#404040; --ink-400:#6a6a6a; --border:#e6e6e6; }
+:root{ --brand:#0a7a4a; --brand-700:#075a36; --brand-100:#e9f6ef; --ink:#121212; --ink-600:#404040; --ink-400:#6a6a6a; --border:#e6e6e6;   
+	--leaf1:#c8f5df; --leaf2:#e9f6ef; --leaf3:#cfefff; --leaf4:#ffe6bf;}
 *{box-sizing:border-box}
 html,body{margin:0; overflow-x:hidden}
 html { scroll-padding-top: 110px; }
@@ -104,6 +105,20 @@ header .logo-img{height:48px; width:auto; display:block}
     .sub-banner {height:340px;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,#e9f6ef 0%,#f5fbf8 100%);text-align:center;overflow:hidden;position:relative}
     .sub-banner h1{font-size:clamp(26px,4vw,38px);font-weight:800;letter-spacing:-.5px}
     .sub-banner h1 span{color:var(--brand)}
+	
+	.sub-banner.nature{height:360px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;background:radial-gradient(1200px 600px at 20% 30%, #f0fbf6 0%, #ffffff 60%)}
+    .sub-banner.nature h1{font-size:clamp(26px,4vw,38px);font-weight:800;letter-spacing:-.3px;position:relative;z-index:1}
+    .sub-banner.nature h1 span{color:var(--brand)}
+    .leaf{position:absolute;opacity:.65;filter:blur(.2px)}
+    .leaf svg{display:block}
+    .leaf.l1{left:5%; top:20%; animation:float1 10s ease-in-out infinite}
+    .leaf.l2{right:10%; top:15%; animation:float2 12s ease-in-out infinite}
+    .leaf.l3{left:20%; bottom:-20px; animation:float3 14s ease-in-out infinite}
+    .leaf.l4{right:25%; bottom:0; animation:float1 11s 1s ease-in-out infinite}
+    @keyframes float1{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-18px) rotate(6deg)}}
+    @keyframes float2{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-24px) rotate(-5deg)}}
+    @keyframes float3{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-14px) rotate(8deg)}}
+	
 	@keyframes fadeSlide{0%{opacity:0;transform:translateY(30px)}100%{opacity:1;transform:translateY(0)}}
     @keyframes pulse{0%,100%{color:var(--brand)}50%{color:#3ab67a}}
 	
@@ -144,6 +159,7 @@ footer small{color:var(--ink-400); font-size:14px}
   .v-card h3{ font-size: clamp(18px, 5vw, 22px); }     /* 제목 유연 폰트 */
   .v-card p{ line-height:1.7; } 
   .grid-3{grid-template-columns:1fr}
+   .leaf.l3{left:-14%; bottom:-20px; animation:float3 14s ease-in-out infinite}
 }
 
 /* Mobile nav & layout (<=1024px) */
@@ -156,7 +172,8 @@ footer small{color:var(--ink-400); font-size:14px}
   /* Make CTA look like plain text on mobile */
   #global-nav a.cta-mini, #global-nav a[rel~="noopener"]{background:none; color:var(--ink-600); padding:0; border-radius:0}
   header{padding:0 24px}
-  .hero{padding:50px 16px;}
+  .hero{padding:55px 16px;}
+  .hero h1 {line-height:1.4;}
   .value{padding:80px 16px}
   .tech{padding:80px 16px}
   .promo{padding:50px 16px}
