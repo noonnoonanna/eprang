@@ -153,19 +153,19 @@
 
 <p>
 <label for="name">이름 또는 회사명 <span class="helper">(필수)</span></label>
-<input id="name" name="이름/회사명" type="text" required placeholder="예) 김이피 / (주)이피랑" />
+<input id="name" name="이름/회사명" type="text" maxlength="30" required placeholder="예) 김이피 / (주)이피랑" />
 </p>
 
 
 <p>
 <label for="contact">연락처 <span class="helper">(필수)</span></label>
-<input id="contact" name="연락처" type="text" required placeholder="이메일 또는 전화번호" />
+<input id="contact" name="연락처" type="text" pattern="^[0-9+@.\\-\\s]{5,60}$" required placeholder="이메일 또는 전화번호" />
 </p>
 
 
 <p class="full">
 <label for="message">내용 <span class="helper">(필수)</span></label>
-<textarea id="message" name="내용" required placeholder="문의 내용을 자세히 적어주세요."></textarea>
+<textarea id="message" name="내용" maxlength="3000" required placeholder="문의 내용을 자세히 적어주세요."></textarea>
 </p>
 </div>
 
