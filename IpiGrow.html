@@ -3,314 +3,315 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>(주)이피랑</title>
+  
+  <!-- 외부 라이브러리 -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-<title>(주)이피랑</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Pretendard:wght@300;400;500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
-<style>
-    /* 이 페이지에서만 쓰는 보강 스타일 (사이트 토큰 사용) */
-    .sub-banner.ipigrow{height:340px;display:flex;align-items:center;justify-content:center;background:radial-gradient(1100px 520px at 18% 25%, #f0fbf6 0%, #ffffff 60%);text-align:center;position:relative;overflow:hidden}
-    .sub-banner.ipigrow h1{font-size:clamp(26px,4vw,38px);font-weight:800}
-    .sub-banner.ipigrow h1 span{color:var(--brand)}
 
-    .overview{background:#fff;padding:90px 20px}
-    .overview .wrap{max-width:1100px;margin:0 auto;text-align:center}
-    .overview .lead{margin:8px auto 0;color:var(--ink-600)}
-
-    .formfactors{background:#fff;border-top:1px solid var(--border);padding:90px 20px}
-    .ff-grid{max-width:960px;margin:0 auto;display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
-    .ff-card{background:#fff;border:1px solid var(--border);border-radius:18px;box-shadow:0 8px 22px rgba(0,0,0,.06);padding:22px}
-    .ff-card h3{margin:0 0 8px;color:var(--brand)}
-    .ff-spec{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
-    .ff-spec span{font-size:12px;padding:6px 10px;border-radius:999px;background:#eef7f2;color:#0a7a4a}
-
-    .specs{background:#fff;border-top:1px solid var(--border);padding:90px 20px}
-    .specs .wrap{max-width:1100px;margin:0 auto}
-    .specs .spec-table{width:100%;border-collapse:separate;border-spacing:0;overflow:hidden;border-radius:16px;border:1px solid var(--border)}
-    .specs .spec-table th{padding:14px 16px;border-bottom:1px solid var(--border);text-align:left;white-space:nowrap;}
-	.specs .spec-table td{padding:14px 16px;border-bottom:1px solid var(--border);text-align:left}
-    .specs .spec-table th{background:linear-gradient(180deg,#fdfefe,#f6fbf8);color:var(--brand-700);font-weight:800}
-    .specs .spec-table tr:last-child td{border-bottom:none}
-
-
-    .qa{background:#fff;border-top:1px solid var(--border);padding:90px 20px}
-    .qa .wrap{max-width:1100px;margin:0 auto}
-    .qagrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .qacard{background:linear-gradient(180deg,#fdfefe,#f6fbf8);border:1px solid var(--border);border-radius:16px;padding:18px;box-shadow:0 8px 20px rgba(0,0,0,.06)}
-    .qacard h4{margin:0 0 8px;color:var(--brand)}
-
-    /* Checklist 스타일 (프리미엄 타이포) */
-    .trust.checklist{background:#fcfbf7;border-top:1px solid var(--border);padding:96px 20px}
-    .trust.checklist .wrap{max-width:980px;margin:0 auto}
-    .sec-title.premium{letter-spacing:-.3px;line-height:1.15}
-    .trust.checklist .subtitle{margin-top:8px;color:var(--ink-600)}
-
-    .clist{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:14px}
-    .clist li{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;background:#fff;border:1px solid var(--border);border-radius:16px;padding:16px 18px;box-shadow:0 6px 18px rgba(0,0,0,.04)}
-
-    .tick{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:999px;background:linear-gradient(180deg,#e9f6ef,#e9f6ff);border:1px solid var(--border)}
-    .tick svg{width:22px;height:22px;display:block}
-    .tick .ring{fill:none;stroke:var(--leaf2);stroke-width:1.6}
-    .tick .mark{fill:none;stroke:var(--brand);stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:60;stroke-dashoffset:60;}
-
-    .clist li:hover .tick .mark{animation:draw 0.6s ease forwards}
-    @keyframes draw{to{stroke-dashoffset:0}}
-
-    .cbody h3{margin:0 0 4px;font-size:18px;font-weight:800;letter-spacing:-.2px;color:var(--ink-900)}
-    .cbody p{margin:0;color:var(--ink-600);line-height:1.7}
-	
-    .oem{background:#f9fafb;border-top:1px solid var(--border);padding:90px 20px}
-    .oem .wrap{max-width:1100px;margin:0 auto}
-    .oem .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
-    .oem .card{background:#fff;border:1px solid var(--border);border-radius:18px;padding:22px;box-shadow:0 8px 22px rgba(0,0,0,.06)}
-    .oem .card h4{margin:0 0 8px;color:var(--brand)}
-
-    .cta{text-align:center;background:linear-gradient(90deg,#e9f6ef,#e9f6ff);border-top:1px solid var(--border);padding:90px 20px}
-    .cta .wrap{max-width:1100px;margin:0 auto}
-    .cta a{display:inline-block;margin-top:12px;padding:14px 26px;background:var(--brand);color:#fff;border-radius:999px;text-decoration:none;font-weight:800}
-
-    @media(max-width:1024px){
-      .ff-grid{grid-template-columns:1fr}
-      .qagrid{grid-template-columns:1fr}
-      .oem .grid{grid-template-columns:1fr}
+  <style>
+    /* [서브 페이지 공통 디자인 시스템] - 통일감을 위해 3개 페이지에 동일 적용 */
+    :root {
+        --page-title-size: clamp(32px, 5vw, 44px); /* 메인 타이틀 크기 통일 */
+        --sec-title-size: clamp(24px, 4vw, 32px);  /* 섹션 제목 크기 통일 */
+        --lead-size: clamp(16px, 3vw, 18px);       /* 본문(Lead) 크기 통일 */
+        --sub-banner-height: 400px;                /* 배너 높이 통일 */
+        
+        /* 컬러 팔레트 */
+        --brand: #0a7a4a;
+        --brand-light: #e9f6ef;
+        --text-main: #121212;
+        --text-sub: #555555;
+        --border-color: #eeeeee;
+        --shadow-soft: 0 10px 30px rgba(0,0,0,0.04);
+        --shadow-hover: 0 15px 35px rgba(10, 122, 74, 0.08);
     }
-    /* 디자인 강화 추가 스타일 */
-  .qacard, .doc{transition:transform .2s ease, box-shadow .2s ease;}
-  .qacard:hover, .doc:hover{transform:translateY(-4px);box-shadow:0 10px 26px rgba(0,0,0,.08);} 
-  .qacard h4, .doc h4{font-weight:800;letter-spacing:-0.2px;}
-  .qacard p, .doc p{line-height:1.65;color:var(--ink-600);} 
-  .user-benefit{position:relative;overflow:hidden;}
-  .user-benefit::before{content:'';position:absolute;inset:0;background:radial-gradient(600px 300px at 50% 20%, rgba(0,150,100,.06), transparent);} 
-  /* 서브배너 — 따뜻하고 가독성 좋은 스타일 */
-    .sub-banner.ipigrow.warm{height:360px;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden;background:radial-gradient(1200px 600px at 20% 30%, #fff7ec 0%, #ffffff 55%)}
-    .sub-banner.ipigrow.warm::after{content:"";position:absolute;inset:0;background:radial-gradient(900px 360px at 50% 65%, rgba(10,122,74,.10), transparent 60%)}
-    .sub-banner.ipigrow.warm h1{position:relative;z-index:2;font-size:clamp(28px,5vw,42px);font-weight:900;letter-spacing:-.4px;line-height:1.2;padding:12px 18px;border-radius:14px;}
-    .sub-banner.ipigrow.warm h1 span{color:var(--brand)}
-    .sub-banner.ipigrow.warm .leaf{position:absolute;opacity:.8;filter:drop-shadow(0 6px 14px rgba(0,0,0,.06))}
-    .sub-banner.ipigrow.warm .l1{left:6%; top:24%; animation:leafFloat1 10s ease-in-out infinite}
-    .sub-banner.ipigrow.warm .l2{right:10%; top:18%; animation:leafFloat2 12s ease-in-out infinite}
-    .sub-banner.ipigrow.warm .l3{left:18%; bottom:-10px; animation:leafFloat3 14s ease-in-out infinite}
-    .sub-banner.ipigrow.warm .l4{right:26%; bottom:-6px; animation:leafFloat1 11s 1s ease-in-out infinite}
-    @keyframes leafFloat1{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-16px) rotate(6deg)}}
-    @keyframes leafFloat2{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-22px) rotate(-5deg)}}
-    @keyframes leafFloat3{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-12px) rotate(8deg)}}
-    /* 이미지 썸네일: 3:2 비율의 작은 미디어 박스 */
-    .ff-media.small{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:3/2;background:linear-gradient(180deg,#f5faf7,#eef5ff);border:1px solid var(--border);margin-bottom:12px}
-    .ff-media.small img{width:100%;height:100%;object-fit:cover;display:block}
 
-    /* 카드 헤더 아이콘 */
-    .row{display:flex;align-items:center;gap:10px;margin-bottom:8px}
-    .icon-circle{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:999px;background:linear-gradient(180deg,#e9f6ef,#e9f6ff);border:1px solid var(--border)}
-    .icon-circle.soft{background:#fff}
-    .icon-circle svg{width:20px;height:20px}
-    .icon-circle .ring{fill:none;stroke:var(--leaf2);stroke-width:1.6}
-    .icon-circle .mark{fill:none;stroke:var(--brand);stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
-</style>
+    /* 서브 배너 공통 스타일 */
+    .sub-banner.ipigrow {
+        height: var(--sub-banner-height);
+        background: radial-gradient(circle at 50% 40%, #f8fffc 0%, #ffffff 70%);
+        display: flex; align-items: center; justify-content: center;
+        text-align: center; position: relative; overflow: hidden;
+    }
+    .sub-banner.ipigrow h1 {
+        font-size: var(--page-title-size);
+        font-weight: 800; color: #222; letter-spacing: -1px; position: relative; z-index: 2; margin: 0;
+    }
+    .sub-banner.ipigrow h1 span { color: var(--brand); }
+
+    /* 섹션 공통 스타일 */
+    section { padding: 100px 20px; background: #fff; border-top: 1px solid transparent; }
+    .wrap { max-width: 1100px; margin: 0 auto; position: relative; }
+    .sec-title { font-size: var(--sec-title-size); font-weight: 700; margin-bottom: 24px; letter-spacing: -0.5px; color: #222; text-align: center; }
+    .lead { font-size: var(--lead-size); color: var(--text-sub); line-height: 1.7; max-width: 760px; margin: 0 auto; text-align: center; word-break: keep-all; }
+
+    /* 잎사귀 애니메이션 */
+    .leaf { position: absolute; pointer-events: none; z-index: 1; opacity: 0.7; }
+    .l1 { left: 10%; top: 20%; width: 80px; animation: float 8s ease-in-out infinite; }
+    .l2 { right: 15%; top: 15%; width: 60px; animation: float 10s ease-in-out infinite reverse; }
+    .l3 { left: 20%; bottom: 10%; width: 90px; animation: float 12s ease-in-out infinite 1s; }
+    .l4 { right: 25%; bottom: 15%; width: 70px; animation: float 9s ease-in-out infinite reverse 2s; }
+    @keyframes float { 0%, 100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-20px) rotate(5deg); } }
+
+    /* 카드 그리드 시스템 */
+    .ff-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 50px; }
+    .ff-card {
+        background: #fff; border-radius: 24px; padding: 32px;
+        border: 1px solid var(--border-color); box-shadow: var(--shadow-soft);
+        transition: all 0.3s ease;
+    }
+    .ff-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-hover); border-color: var(--brand-light); }
+    .ff-card h3 { font-size: 22px; font-weight: 700; margin-bottom: 12px; color: #222; }
+    .ff-card p { font-size: 16px; color: var(--text-sub); margin-bottom: 20px; line-height: 1.6; }
+    .ff-media { 
+        border-radius: 16px; overflow: hidden; margin-bottom: 24px; background: #f5f5f5; 
+        aspect-ratio: 8/6; display: flex; align-items: center; justify-content: center;
+    }
+    .ff-media img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+    .ff-card:hover .ff-media img { transform: scale(1.05); }
+    
+    /* QA 섹션 (아이콘 카드) */
+    .qagrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 50px; }
+    .qacard {
+        background: #fff; padding: 28px; border-radius: 20px; border: 1px solid var(--border-color);
+        transition: all 0.3s ease; position: relative; overflow: hidden;
+    }
+    .qacard:hover { transform: translateY(-5px); box-shadow: var(--shadow-soft); border-color: var(--brand); }
+    .qacard h4 { font-size: 18px; font-weight: 700; margin: 12px 0 8px; color: #333; }
+    .qacard p { font-size: 15px; color: var(--text-sub); line-height: 1.6; }
+    .icon-circle { 
+        width: 48px; height: 48px; background: var(--brand-light); border-radius: 50%; 
+        display: flex; align-items: center; justify-content: center; color: var(--brand); font-size: 20px;
+    }
+
+    /* 체크리스트 & 스펙 */
+    .checklist { background: #f9fafb; }
+    .clist { display: grid; gap: 16px; margin-top: 40px; list-style: none; padding: 0; }
+    .clist li { 
+        background: #fff; padding: 24px; border-radius: 16px; border: 1px solid rgba(0,0,0,0.03); 
+        display: flex; gap: 20px; align-items: flex-start; box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+        transition: transform 0.2s;
+    }
+    .clist li:hover { transform: translateX(5px); border-color: var(--brand-light); }
+    .tick { min-width: 32px; height: 32px; background: var(--brand); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-top: 2px; }
+
+    .spec-table { width: 100%; border-collapse: separate; border-spacing: 0; border: 1px solid var(--border-color); border-radius: 16px; overflow: hidden; margin-top: 40px; }
+    .spec-table th, .spec-table td { padding: 18px 24px; border-bottom: 1px solid var(--border-color); text-align: left; }
+    .spec-table th { background: #f4f6f5; width: 30%; font-weight: 600; color: #333; }
+    .spec-table tr:last-child th, .spec-table tr:last-child td { border-bottom: none; }
+
+    /* 모바일 반응형 */
+    @media (max-width: 768px) {
+        .ff-grid, .qagrid { grid-template-columns: 1fr; }
+        .spec-table th, .spec-table td { display: block; width: 100%; }
+        .spec-table th { background: #f9f9f9; padding-bottom: 4px; color: var(--brand); }
+        .spec-table td { padding-top: 0; }
+        section { padding: 60px 20px; }
+    }
+	
+	
+  /* CTA */
+  .cta{padding:100px 20px;text-align:center;background:linear-gradient(90deg,#e9f6ef,#e9f6ff);border-top:1px solid var(--border)}
+  .cta a{display:inline-block;padding:16px 30px;background:var(--brand);color:#fff;border-radius:999px;text-decoration:none;font-weight:800;font-size:16px}
+  .cta a:hover{background:#075a36}
+  </style>
 </head>
 <body>
   <header>
     <a href="index.html" class="logo-link" aria-label="이피랑 로고">
       <img class="logo-img" src="images/logo.png" alt="이피랑 로고">
     </a>
-    <button class="nav-toggle" aria-label="메뉴 열기" aria-expanded="false" aria-controls="global-nav">
+    <button class="nav-toggle" aria-label="메뉴 열기">
       <span class="bar"></span><span class="bar"></span><span class="bar"></span>
     </button>
     <nav id="global-nav">
       <ul>
         <li><a href="about.html">소개</a></li>
         <li><a href="well.html">웰니스</a></li>
-        <li><a href="IpiGrow.html">스마트팜</a></li>
+        <li><a href="IpiGrow.html" class="active" style="color:#0a7a4a">스마트팜</a></li>
         <li><a href="subscription.html">구독 안내</a></li>
         <li><a href="contact.html">문의</a></li>
-        <li><a href="https://noonnoonanna.github.io/eprang_app/intro.html" target="_blank" rel="noopener">앱 열기</a></li>
+        <li><a href="https://noonnoonanna.github.io/eprang_app/intro.html" target="_blank">앱 열기</a></li>
       </ul>
     </nav>
   </header>
 
-    <section class="sub-banner ipigrow warm">
-    <h1><span>IpiGrow</span> 스마트팜</h1>
-    <div class="leaf l1" aria-hidden="true">
-      <svg width="120" height="120" viewBox="0 0 120 120" fill="none"><path d="M80 10C52 38 36 50 36 74c0 20 16 36 36 36s36-16 36-36c0-24-16-36-28-64z" fill="var(--leaf1)"/></svg>
+  <!-- Hero Section -->
+  <section class="sub-banner ipigrow">
+    <div>
+        <h1><span>IpiGrow</span> 스마트팜</h1>
+        <p style="margin-top:16px; font-size:18px; color:#666;">자연을 가장 가까이에서 만나는 방법</p>
     </div>
-    <div class="leaf l2" aria-hidden="true">
-      <svg width="110" height="110" viewBox="0 0 110 110" fill="none"><path d="M70 8C50 28 34 40 34 60a36 36 0 1072 0c0-20-10-30-36-52z" fill="var(--leaf2)"/></svg>
-    </div>
-    <div class="leaf l3" aria-hidden="true">
-      <svg width="140" height="140" viewBox="0 0 140 140" fill="none"><path d="M98 12C70 40 54 52 54 76a40 40 0 1080 0c0-24-12-34-36-64z" fill="var(--leaf3)"/></svg>
-    </div>
-    <div class="leaf l4" aria-hidden="true">
-      <svg width="100" height="100" viewBox="0 0 100 100" fill="none"><path d="M70 8C50 28 34 40 34 60a30 30 0 1060 0c0-20-10-28-24-52z" fill="var(--leaf4)"/></svg>
-    </div>
+    <!-- 잎사귀 장식 -->
+    <div class="leaf l1"><i class="fa-solid fa-leaf" style="color:#c8f5df; font-size:60px;"></i></div>
+    <div class="leaf l2"><i class="fa-solid fa-leaf" style="color:#e9f6ef; font-size:50px;"></i></div>
+    <div class="leaf l3"><i class="fa-solid fa-leaf" style="color:#cfefff; font-size:80px;"></i></div>
+    <div class="leaf l4"><i class="fa-solid fa-leaf" style="color:#ffe6bf; font-size:65px;"></i></div>
   </section>
 
-  <!-- 개요 (스토리텔링 전용) -->
-  <section class="overview">
+
+  <!-- User Benefit -->
+  <section class="user-benefit" style="background: linear-gradient(to bottom, #fcfdfd, #f4f8f6);">
     <div class="wrap">
-      <h2 class="sec-title">집에서 매일, 식물이 자라는 순간을 만나세요</h2>
-      <p class="lead">IpiGrow는 ‘누구나 실패 없이 식물을 키울 수 있는 경험’을 위해 만들어진 작은 실내 농장입니다. 매일 조금씩 자라는 잎사귀를 보며, 생활 속 작은 성장 루틴을 경험하길 바랍니다.</p>
-      <p class="lead" style="margin-top:18px;color:var(--ink-500)">복잡한 기술은 모두 안쪽에 숨기고, 사용자가 느끼는 부분은 단순하고 편안하게 만드는 것이 우리의 철학입니다.</p>
+      <h2 class="sec-title">운영과 관리가 쉬운 구조</h2>
+      <p class="lead">
+        급수·조명·순환을 자동 제어해,<br>
+      전담 인력이 없더라도 기본 재배 환경이 유지되도록 설계했습니다.<br>
+      설치 이후 운영 부담을 줄이고, 공간 경험과 프로그램 기획에 집중할 수 있습니다.
+      </p>
     </div>
   </section>
 
-  <!-- 사용자 중심 혜택 섹션 -->
-  <section class="user-benefit" style="background:#f9faf9;border-top:1px solid var(--border);padding:90px 20px;">
-    <div class="wrap" style="max-width:1000px;margin:0 auto;text-align:center;">
-      <h2 class="sec-title">누구나 쉽게 사용할 수 있도록</h2>
-      <p style="color:var(--ink-600);margin-top:12px;line-height:1.7">물을 언제 채워야 할지 고민하지 않아도 되고, 조명을 언제 켜야 할지 신경 쓰지 않아도 됩니다. IpiGrow는 사용자가 실수하더라도 식물이 잘 자랄 수 있도록 환경을 자동으로 유지합니다. 집, 사무실, 어린아이 있는 공간에서도 안전하게 사용할 수 있도록 설계했습니다.</p>
-    </div>
-  </section>
-
-  <!-- 폼팩터 -->
+  <!-- Products -->
   <section class="formfactors">
-    <div class="ff-grid">
-      <article class="ff-card">
-        <div class="ff-media small">
-          <!-- 작은 이미지 영역: 3:2 비율, 비어두면 박스만 보임 -->
-          <img src="images/ipi_2.png" alt="탁상형 2–3단 이미지" onerror="this.style.display='none'">
-        </div>
-        <h3>탁상형 2–3단</h3>
-        <p>책상/주방에 적합한 콤팩트 구조. 간단한 모듈 교체로 2→3단 확장 가능.</p>
-        <div class="ff-spec">
-          <span>식물용 LED</span><span>저소음 펌프</span><span>양액 트레이</span><span>타이머/컨트롤 준비</span>
-        </div>
-      </article>
-      <article class="ff-card">
-        <div class="ff-media small">
-          <img src="images/ipi_4.png" style="object-fit:contain" alt="슬림 수직형 3–4단 이미지" onerror="this.style.display='none'">
-        </div>
-        <h3>슬림 수직형 3–4단</h3>
-        <p>바닥 공간을 최소화하는 슬림 타워. 3→4단 확장 옵션 제공.</p>
-        <div class="ff-spec">
-          <span>고정밀 배관</span><span>누수 방지 설계</span><span>트레이 호환</span><span>센서 인터페이스</span>
-        </div>
-      </article>
+    <div class="wrap">
+      <div class="ff-grid">
+        <article class="ff-card">
+          <div class="ff-media">
+            <img src="images/main_img1.png" alt="탁상형 2–3단" onerror="this.style.display='none'; this.parentNode.innerHTML='<div style=\'color:#ccc\'><i class=\'fa-solid fa-image fa-2x\'></i></div>'">
+          </div>
+          <h3>수평형 2–3단</h3>
+          <p>교체로 단수를 확장할 수 있습니다.</p>
+          <div style="display:flex; gap:8px; flex-wrap:wrap;">
+            <span style="font-size:12px; padding:4px 10px; background:#eef7f2; color:#0a7a4a; border-radius:20px;">식물용 LED</span>
+            <span style="font-size:12px; padding:4px 10px; background:#eef7f2; color:#0a7a4a; border-radius:20px;">저소음 펌프</span>
+			<span style="font-size:12px; padding:4px 10px; background:#eef7f2; color:#0a7a4a; border-radius:20px;">양액 트레이</span>
+			<span style="font-size:12px; padding:4px 10px; background:#eef7f2; color:#0a7a4a; border-radius:20px;">타이머</span>
+          </div>
+        </article>
+        <article class="ff-card">
+          <div class="ff-media" style="background:#E5E6E5">
+            <img src="images/main_img2.png" alt="슬림 수직형 3–4단" onerror="this.style.display='none'; this.parentNode.innerHTML='<div style=\'color:#ccc\'><i class=\'fa-solid fa-image fa-2x\'></i></div>'">
+          </div>
+          <h3>수직형 3–4단</h3>
+          <p>좁은 공간에서도 풍성하게 기를 수 있는 슬림 타워형입니다. 바닥 공간을 효율적으로 사용하세요.</p>
+          <div style="display:flex; gap:8px; flex-wrap:wrap;">
+            <span style="font-size:12px; padding:4px 10px; background:#eef7f2; color:#0a7a4a; border-radius:20px;">고정밀 배관</span>
+            <span style="font-size:12px; padding:4px 10px; background:#eef7f2; color:#0a7a4a; border-radius:20px;">누수 방지</span>
+			<span style="font-size:12px; padding:4px 10px; background:#eef7f2; color:#0a7a4a; border-radius:20px;">트레이 호환</span>
+			<span style="font-size:12px; padding:4px 10px; background:#eef7f2; color:#0a7a4a; border-radius:20px;">센서 인터페이스</span>
+          </div>
+        </article>
+      </div>
     </div>
   </section>
 
-  <!-- 품질/검수 -->
-  
-
+  <!-- QA / Features -->
   <section class="qa">
     <div class="wrap">
       <h2 class="sec-title">안심하고 사용할 수 있는 이유</h2>
       <div class="qagrid">
         <div class="qacard">
-          <div class="row"><span class="icon-circle"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Z" class="ring"/><path d="M7 12.5l3 3 6-7" class="mark"/></svg></span><h4>물이 새지 않아요</h4></div>
-          <p>출고 전 모든 제품에 물을 가득 채운 상태로 테스트해, 집안 바닥이 젖을 걱정 없이 사용할 수 있습니다.</p>
+          <div class="icon-circle"><i class="fa-solid fa-droplet"></i></div>
+          <h4>누수 리스크 최소화</h4>
+          <p>출고 전 전수 테스트로 점검하여 바닥 및 인테리어 손상을 최소화하도록 검증합니다.</p>
         </div>
         <div class="qacard">
-          <div class="row"><span class="icon-circle"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11h16v6a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3v-6Z" class="ring"/><path d="M12 3l7 8H5l7-8Z" class="mark"/></svg></span><h4>전기적으로 안전해요</h4></div>
-          <p>전기 누설·접지 등을 점검하여, 아이나 반려동물이 있는 공간에서도 안심할 수 있도록 설계했습니다.</p>
+          <div class="icon-circle"><i class="fa-solid fa-bolt"></i></div>
+          <h4>전기 안전 점검</h4>
+          <p>전기 누설, 접지 상태 등 주요 항목을 사전에 점검해 다중 이용 시설에서도 안전하게 운용할 수 있도록 설계했습니다.</p>
         </div>
         <div class="qacard">
-          <div class="row"><span class="icon-circle"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" class="ring"/><path d="M8 13c1.5-2 3.5-3 4-3s2 .8 4 3" class="mark"/></svg></span><h4>식물이 잘 자라는 빛</h4></div>
-          <p>식물이 건강하게 자라기 위한 밝기와 색을 확인해, 초보자도 키우기 쉬운 환경을 만듭니다.</p>
+          <div class="icon-circle"><i class="fa-regular fa-sun"></i></div>
+          <h4>실내 재배 최적화 광원</h4>
+          <p>식물 성장에 맞춘 파장·광량을 제공해 채광이 부족한 실내 환경에서도 안정적인 재배가 가능합니다.</p>
         </div>
         <div class="qacard">
-          <div class="row"><span class="icon-circle"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" class="ring"/><path d="M12 6v6l4 2" class="mark"/></svg></span><h4>오래 켜둬도 문제 없어요</h4></div>
-          <p>최소 하루 이상 연속으로 작동시켜 초기 고장 가능성을 낮추고, 안정적인 사용을 보장합니다.</p>
+          <div class="icon-circle"><i class="fa-solid fa-clock"></i></div>
+          <h4>연속 운전 테스트</h4>
+          <p>최소 24시간 이상 연속 운전 테스트를 통해 초기 불량을 사전에 걸러내고, 설치 직후 안정성을 확보합니다.</p>
         </div>
         <div class="qacard">
-          <div class="row"><span class="icon-circle"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l6 6 10-12" class="mark"/><circle cx="12" cy="12" r="10" class="ring"/></svg></span><h4>검증된 제품만 출고</h4></div>
-          <p>점검을 통과한 제품만 보내드리기 때문에, 설치 후 바로 건강한 재배가 가능합니다.</p>
+          <div class="icon-circle"><i class="fa-solid fa-check-double"></i></div>
+          <h4>내부 품질 기준 적용</h4>
+          <p>내부 검수 기준을 통과한 유닛만 설치 현장에 공급하여, 설치 후 장애 가능성을 줄였습니다.</p>
         </div>
         <div class="qacard">
-          <div class="row"><span class="icon-circle"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="3" ry="3" class="ring"/><path d="M7 10h10M7 14h6" class="mark"/></svg></span><h4>다양한 공간에 적합</h4></div>
-          <p>가정·사무실·상업 공간 등 여러 환경에서 안정적으로 사용할 수 있도록 구성되어 있습니다.</p>
+          <div class="icon-circle"><i class="fa-solid fa-house"></i></div>
+          <h4>환경 변화 대응성</h4>
+          <p>실내 조도·습도·환기 등의 변동에도 안정적인 재배가 가능하도록 기본 구조를 설계했습니다.<br>
+공간 운영 상황이 달라져도 일정 수준의 재배 성능을 유지합니다.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 문서/추적 -->
-  <section class="trust checklist">
+  <!-- Checklist -->
+  <section class="checklist">
     <div class="wrap">
-      <h2 class="sec-title premium">제품을 믿고 사용할 수 있는 이유</h2>
-      <p class="subtitle">복잡한 제조 정보는 숨기고, 사용자에게 중요한 신뢰 기준만 간결하게 정리했어요.</p>
-
-      <ul class="clist" role="list">
+      <h2 class="sec-title">제품을 믿고 사용할 수 있는 이유</h2>
+      <p class="lead">복잡한 제조 정보는 숨기고, 사용자에게 중요한 신뢰 기준만 간결하게 정리했어요.</p>
+      <ul class="clist">
         <li>
-          <span class="tick" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" class="ring"/><path d="M7 12.5l3 3 7-7" class="mark"/></svg>
-          </span>
-          <div class="cbody">
-            <h3>제조 과정이 투명해요</h3>
-            <p>어떤 재료와 공정을 거쳐 만들어졌는지 기록하여, 문제가 생겨도 빠르게 원인을 확인할 수 있어요.</p>
+          <div class="tick"><i class="fa-solid fa-check"></i></div>
+          <div>
+            <h3 style="margin:0 0 5px; font-size:18px;">제조 과정이 투명해요</h3>
+            <p style="margin:0; color:#666;">모든 재료와 공정 기록을 관리하여, 품질 이슈 발생 시 신속하고 정확하게 대응합니다.</p>
           </div>
         </li>
         <li>
-          <span class="tick" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" class="ring"/><path d="M7 12.5l3 3 7-7" class="mark"/></svg>
-          </span>
-          <div class="cbody">
-            <h3>출고 전 점검 기준을 공개해요</h3>
-            <p>누수·전기·연속운전 등 핵심 항목을 체크리스트로 확인하고, 통과 제품만 출고합니다.</p>
+          <div class="tick"><i class="fa-solid fa-check"></i></div>
+          <div>
+            <h3 style="margin:0 0 5px; font-size:18px;">출고 전 점검 기준 공개</h3>
+            <p style="margin:0; color:#666;">누수, 전기 안전, 소음 등 사용자가 겪을 수 있는 불편함을 미리 체크하고 해결합니다.</p>
           </div>
         </li>
         <li>
-          <span class="tick" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" class="ring"/><path d="M7 12.5l3 3 7-7" class="mark"/></svg>
-          </span>
-          <div class="cbody">
-            <h3>사용자를 위한 쉬운 안내</h3>
-            <p>설치·세척·소모품 교체 주기를 간단한 가이드로 제공해, 처음 쓰는 분도 부담이 없어요.</p>
+          <div class="tick"><i class="fa-solid fa-check"></i></div>
+          <div>
+            <h3 style="margin:0 0 5px; font-size:18px;">친절한 가이드 제공</h3>
+            <p style="margin:0; color:#666;">설치부터 관리, 청소까지. 누구나 쉽게 따라 할 수 있는 직관적인 매뉴얼을 제공합니다.</p>
           </div>
         </li>
       </ul>
     </div>
   </section>
   
-  
-  <!-- 주요 사양 -->
+  <!-- Specs -->
   <section class="specs">
     <div class="wrap">
-      <h2 class="sec-title">주요 사양</h2>
-      <table class="spec-table" aria-label="IpiGrow 사양 표">
-        <tr><th>광원</th><td>식물용 LED (PPFD 샘플링/기록), 장시간 안정성 테스트</td></tr>
-        <tr><th>구동</th><td>저소음 펌프 + 양액/배관, 타이머 제어</td></tr>
-        <tr><th>확장성</th><td>데이터 레디 센서 인터페이스(온습도/광량/수위 등 확장 대비)</td></tr>
-        <tr><th>전원/안전</th><td>절연/접지 테스트 기준 충족, 사용자 안전 주의 매뉴얼 제공</td></tr>
-        <tr><th>폼팩터</th><td>탁상형 2–3단 / 수직형 3–4단 모듈 구조</td></tr>
-        <tr><th>유지보수</th><td>트레이·필터·양액 등 소모품 교체 주기 가이드</td></tr>
+      <h2 class="sec-title">상세 사양</h2>
+      <table class="spec-table">
+        <tr><th>광원 시스템</th><td>식물 전용 Full Spectrum LED (PPFD 최적화)</td></tr>
+        <tr><th>순환 시스템</th><td>저소음 수중 펌프 & 자동 타이머 제어</td></tr>
+        <tr><th>확장성</th><td>스마트 센서 인터페이스 (온습도/수위/광량 등 확장 가능)</td></tr>
+        <tr><th>안전 기준</th><td>절연 클래스 II, 이중 접지 설계</td></tr>
+        <tr><th>유지 관리</th><td>분리형 트레이 및 필터 구조로 세척 용이</td></tr>
       </table>
     </div>
   </section>
 
-  <section class="cta">
-    <a href="https://noonnoonanna.github.io/eprang_app/intro.html" target="_blank" rel="noopener">앱에서 나의 맞춤 루틴 시작하기</a>
+  <!-- CTA -->
+  <section class="cta" style="background: linear-gradient(90deg,#e9f6ef,#e9f6ff); padding: 80px 20px; text-align:center;">
+<div class="wrap">
+      <h2 class="sec-title">스마트팜 설치, 함께 시작해볼까요?</h2>
+      <a href="contact.html">프로젝트·설치 문의하기</a>
+    </div>
   </section>
 
-<footer>
-  <div class="footer-inner">
-    <div class="brand">상호 : (주)이피랑 | 대표 : 김소연<br>메일 : eprang08@gmail.com<br>주소 : 경기도 김포시 고촌읍 상미로9번길 41</div>
-    <div class="socials">
-      <a href="#" aria-label="Instagram"><svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm10 2a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h10zm-5 3a5 5 0 1 0 0 10a5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6a3 3 0 0 1 0-6zm4.75-.75a1.25 1.25 0 1 1 0 2.5a1.25 1.25 0 0 1 0-2.5z"/></svg></a>
+  <footer>
+    <div class="footer-inner">
+      <div class="brand">상호 : (주)이피랑 | 대표 : 김소연<br>메일 : eprang08@gmail.com<br>주소 : 경기도 김포시 고촌읍 상미로9번길 41</div>
+      <div class="socials">
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+      <small style="margin-top:16px; display:block;">© 2025 (주)이피랑. All rights reserved.</small>
     </div>
-    <small>© 2025 (주)이피랑. All rights reserved.</small>
-  </div>
-</footer>
+  </footer>
 
   <script>
     const toggle = document.querySelector('.nav-toggle');
     const nav = document.getElementById('global-nav');
-    function setExpanded(on){ if(!toggle||!nav) return; toggle.setAttribute('aria-expanded', on ? 'true' : 'false'); nav.classList.toggle('open', !!on); document.body.classList.toggle('nav-open', !!on);}    
-    if(toggle){ toggle.addEventListener('click', ()=>{ const isOpen = nav.classList.contains('open'); setExpanded(!isOpen); }); }
-    document.querySelectorAll('#global-nav a').forEach(a=>a.addEventListener('click', ()=> setExpanded(false)));
-  </script>
-    <script>
-    // Intersection Observer for reveal animations
-    const io = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
-    },{threshold:0.12});
-    document.querySelectorAll('.why .card, .pillar').forEach(el=>io.observe(el));
-  </script>
-  <script>
-    // 기존 리빌 + what 섹션 카드도 관측
-    const io2 = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io2.unobserve(e.target);} });
-    },{threshold:0.12});
-    document.querySelectorAll('.what .card, .why .card, .pillar').forEach(el=>io2.observe(el));
+    if(toggle && nav) {
+        toggle.addEventListener('click', () => {
+            nav.classList.toggle('open');
+            document.body.classList.toggle('nav-open');
+        });
+    }
   </script>
 </body>
 </html>
-

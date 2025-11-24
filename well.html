@@ -8,6 +8,7 @@
 <title>(주)이피랑</title>
   <link rel="stylesheet" href="styles.css" />
   <style>
+	
   /* Intro */
   section.intro{background:#f7f9f8;padding:100px 20px;text-align:center}
   section.intro h2{font-size:25px;margin-bottom:16px}
@@ -79,7 +80,7 @@
     <nav id="global-nav">
       <ul>
         <li><a href="about.html">소개</a></li>
-		<li><a href="well.html">웰니스</a></li>
+		<li><a href="well.html" class="active" style="color:#0a7a4a">웰니스</a></li>
 		<li><a href="IpiGrow.html">스마트팜</a></li>
         <li><a href="subscription.html">구독 안내</a></li>
 		<li><a href="contact.html">문의</a></li>
@@ -90,7 +91,8 @@
 
   <!-- Sub Banner : keep same skeleton -->  
     <section class="sub-banner nature">
-    <h1>자연이 길러주는 <span>웰니스</span>, 일상에 스며들다</h1>
+    <div><h1>스마트팜에 <span>웰니스 가치를</span> 더하는 솔루션</h1>
+	<p style="margin-top:16px; font-size:18px; color:#666;">공간에 설치된 스마트팜과 연동된 데이터 기반 웰니스 루틴을 제공합니다.</p></div>
     <div class="leaf l1" aria-hidden="true">
       <svg width="120" height="120" viewBox="0 0 120 120" fill="none"><path d="M80 10C52 38 36 50 36 74c0 20 16 36 36 36s36-16 36-36c0-24-16-36-28-64z" fill="var(--leaf1)"/></svg>
     </div>
@@ -121,12 +123,12 @@
           <p style="margin:0;color:#444;">몸·마음·환경이 연결된 건강을 함께 돌봅니다.</p>
         </div>
         <div style="background:#fff;border:1px solid #e6e6e6;border-radius:16px;padding:24px;box-shadow:0 6px 16px rgba(0,0,0,.05);">
-          <h3 style="margin-top:0;color:var(--brand)">꾸준한 루틴</h3>
-          <p style="margin:0;color:#444;">자연과 조화를 이루며 꾸준히 유지 가능한 습관을 만듭니다.</p>
+          <h3 style="margin-top:0;color:var(--brand)">지속성</h3>
+          <p style="margin:0;color:#444;">일상과 가까운 재배·섭취 루틴은 꾸준한 참여를 이끌어냅니다.</p>
         </div>
         <div style="background:#fff;border:1px solid #e6e6e6;border-radius:16px;padding:24px;box-shadow:0 6px 16px rgba(0,0,0,.05);">
-          <h3 style="margin-top:0;color:var(--brand)">나에게 맞춤</h3>
-          <p style="margin:0;color:#444;">데이터 기반 맞춤 루틴으로 나에게 맞는 건강을 찾아갑니다.</p>
+          <h3 style="margin-top:0;color:var(--brand)">시용자 맞춤</h3>
+          <p style="margin:0;color:#444;">데이터 기반 맞춤 루틴으로 사용자에게 맞는 건강을 찾아갑니다.</p>
         </div>
       </div>
     </div>
@@ -193,7 +195,7 @@
           </div>
           <h3>맞춤 추천</h3>
         </div>
-        <p>온보딩 설문과 간단한 기록을 바탕으로, 당신에게 맞는 허브·잎채소 조합을 투명한 규칙으로 추천합니다.</p>
+        <p>온보딩 설문과 간단한 기록을 바탕으로, 사용자에게 맞는 허브·잎채소 조합을 투명한 규칙으로 추천합니다.</p>
       </article>
       <div class="connector"><span class="dot"></span></div>
       <article class="pillar step2">
@@ -201,9 +203,9 @@
           <div class="icon">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 2l3 7h7l-5.5 4 2 7L12 17l-6.5 3 2-7L2 9h7z" fill="#F9C74F"/></svg>
           </div>
-          <h3>재배 & 섭취 루틴</h3>
+          <h3>재배 & 섭취</h3>
         </div>
-        <p>미니 스마트팜과 라이브 플러그(육묘) 정기공급으로, 신선한 그린을 집에서 길러 바로 섭취합니다.</p>
+        <p>스마트팜 재배와 라이브 플러그 공급을 기반으로, 참여형 섭취 루틴을 구성합니다.</p>
       </article>
       <div class="connector"><span class="dot"></span></div>
       <article class="pillar step3">
@@ -213,7 +215,7 @@
           </div>
           <h3>피드백 리포트</h3>
         </div>
-        <p>주간 요약과 근거(규칙/지표)를 제공해, 변화의 방향을 이해하고 다음 주 루틴을 조정합니다.</p>
+        <p>주간 요약과 근거(규칙/지표)를 제공해, 변화의 방향을 이해하고 참여율·반응·변화 흐름을 파악할 수 있습니다.</p>
       </article>
     </div>
   </div>
@@ -222,7 +224,7 @@
   <!-- Routine loop diagram style -->
   <section class="loop" id="loop">
     <div class="wrap">
-      <h2>나의 루틴, 이렇게 순환합니다</h2>
+      <h2>웰니스, 이렇게 순환합니다</h2>
       <div class="loop-steps">
         <div class="lstep"><b>설문</b><small>목표/습관 파악</small></div>
         <div class="lstep"><b>추천</b><small>허브·잎채소 조합</small></div>
@@ -234,7 +236,10 @@
   </section>
 
   <section class="cta">
-    <a href="https://noonnoonanna.github.io/eprang_app/intro.html" target="_blank" rel="noopener">앱에서 나의 맞춤 루틴 시작하기</a>
+    <div class="wrap">
+      <h2 class="sec-title">스마트팜 설치, 함께 시작해볼까요?</h2>
+      <a href="contact.html">프로젝트·설치 문의하기</a>
+    </div>
   </section>
 
 <footer>
