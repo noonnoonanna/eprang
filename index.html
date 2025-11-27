@@ -1,226 +1,128 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <title>(주)이피랑</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이피랑 - 메인</title>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body>
-  <header>
-    <a href="index.html" class="logo-link" aria-label="이피랑 로고">
-<img class="logo-img" src="images/logo.png" alt="이피랑 로고">
-</a>
-    <!-- 모바일 햄버거 -->
-    <button class="nav-toggle" aria-label="메뉴 열기" aria-expanded="false" aria-controls="global-nav">
-      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-    </button>
-    <nav id="global-nav">
-      <ul>
-        <li><a href="about.html">소개</a></li>
-		<li><a href="well.html">웰니스</a></li>
-		<li><a href="IpiGrow.html">스마트팜</a></li>
-        <li><a href="subscription.html">구독 안내</a></li>
-		<li><a href="contact.html">문의</a></li>
-        <li><a href="https://noonnoonanna.github.io/eprang_app/intro.html" target="_blank" rel="noopener">앱 열기</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="index.html"><img src="images/logo.png" alt="이피랑 로고"></a></div>
+            <div class="hamburger"><i class="fas fa-bars"></i></div>
+            <ul class="nav-links">
+                <li><a href="about.html">소개</a></li>
+                <li><a href="service.html">서비스</a></li>
+                <li><a href="contact.html">문의하기</a></li>
+				<li><a href="https://noonnoonanna.github.io/eprang_app/intro.html" target="_blank" rel="noopener">앱 열기</a></li>
+            </ul>
+        </div>
+    </header>
 
-  <section class="hero">
-    <div>
-      <h1><span class="fx-underline">스마트팜</span>, 기술 위에<span class="fx-highlight">'맞춤 웰니스'</span>를 심다</b></h1>
-      <p class="hero-desc">스마트팜 설치와 설문 기반 웰니스 플랫폼을 하나로 묶어,<br/>기업·시설을 위한 지속 가능한 <span style="color:#0A822A;"><b>웰니스 루틴</b></span>을 설계합니다.</p>
-    </div>
-  </section>
-  
-    <div class="wrap">
-		<div class="main-banner">
+    <section class="hero">
+		<div class="hero-inner">
+			<!-- 왼쪽 텍스트 -->
+			<div class="hero-text">
+			<h1>복잡한 스마트팜,<br><span class="fx-underline">설계·견적·시공까지</span> 한 번에.</h1>
+			<p>농업을 시작하는 가장 쉬운 방법, 이피랑에서 찾으세요.<br>당신에게 가장 맞는 스마트팜을 연결합니다.</p>
+			<div class="hero-btns">
+				<a href="service.html" class="btn">내게 맞는 스마트팜 찾기</a>
+			</div>
+			</div>
+		
+			<div class="hero-visual">
 			<div class="swiper mySwiper">
 				<div class="swiper-wrapper">
-					<div class="swiper-slide slide-1"><img src="images/main_img1.png" alt="이미지1" /></div>
-					<div class="swiper-slide slide-2"><img src="images/main_img2.png" alt="이미지2" /></div>
+				<div class="swiper-slide slide-1">
+					<img src="images/main_img1.png" alt="이미지1" />
 				</div>
+				<div class="swiper-slide slide-2">
+					<img src="images/main_img2.png" alt="이미지2" />
+				</div>
+				</div>
+		
+			</div>
 			</div>
 		</div>
-  </div>
-
-<section class="promo" aria-label="맞춤 모종 구독 프로모션">
-  <div class="promo-grid">
-    <div class="promo-text">
-      <h2>설문 기반 <b>웰니스 재배 플랫폼</b></h2>
-      <p>이용자의 생활 패턴을 이해하는 1분 설문과<br>
-      스마트팜을 결합해 <b>공간 맞춤형 재배 루틴</b>을 만듭니다.<br>
-	  단순 모종 배송이 아닌, 참여와 경험이 이어지는 웰니스 운영 솔루션입니다.</p>
-    </div>
-
-    <div class="promo-img">
-      <div class="device-mock">
-        <img src="images/survey.png" alt="앱 설문 미리보기 화면" />
-      </div>
-      <small class="img-caption">앱에서 1분 설문 → 맞춤 모종 추천</small>
-    </div>
-  </div>
-</section>
+		
+		<div class="scroll-down">
+			<i class="fas fa-chevron-down"></i>
+		</div>
+	</section>
 
 
-  <!-- 데이터 추천(헬스테크) 섹션 -->
-<section class="tech-visual" aria-label="주간 맞춤 추천 (캘린더 + 데이터형)">
-  <div class="techv-grid">
-    <div class="techv-left">
-      <h3 class="techv-title">기록으로 완성되는 <b>주간 맞춤 추천</b></h3>
-      <p class="techv-lead">매일 캘린더에 <b>하루 상태를 기록</b>하면,<br> 주간 통계를 기반으로 <b>나만의 인사이트</b>가 만들어집니다.<br> 몸무게, 걸음수, 물 섭취 등 데이터를 시각적으로 한눈에 확인해보세요.</p>
-
-      <div class="device-mock">
-        <img src="images/calender.PNG" alt="달력 입력 화면 미리보기" />
-      </div>
-      <small class="img-caption">달력 기록으로 맞춤형 루틴 완성</small>
-    </div>
-
-<div class="techv-right">
-      <div class="kcard k-summary">
-        <div class="khead">이번 주 건강 데이터 요약</div>
-        <ul class="kmetrics">
-          <li><span>몸무게</span><b class="tag good">정상</b></li>
-          <li><span>걸음수</span><b class="tag good">활발</b></li>
-          <li><span>근력운동</span><b class="tag warn">보통</b></li>
-          <li><span>심박수</span><b class="tag good">안정</b></li>
-          <li><span>혈당</span><b class="tag good">정상</b></li>
-          <li><span>혈압</span><b class="tag good">정상</b></li>
-          <li><span>물 섭취</span><b class="tag bad">부족</b></li>
-          <li class="memo"><span>컨디션</span><b class="tag warn">보통</b></li>
-        </ul>
-      </div>
-
-      <div class="kcard k-chart">
-        <div class="khead">주간 패턴</div>
-        <div class="chart-mock" id="weeklyChart">
-          <div class="bar steps" data-h="80%"></div>
-          <div class="bar workout" data-h="60%"></div>
-          <div class="bar hr" data-h="65%"></div>
-          <div class="bar water" data-h="50%"></div>
+    <section class="container bg-light">
+        <div class="section-title">
+            <h2>이피랑 솔루션</h2>
+            <p>청년농과 귀농인을 위한 원스톱 스마트팜 설계·견적 플랫폼</p>
         </div>
-        <small class="chart-label">걸음수 / 운동 / 심박수 / 물 섭취</small>
-      </div>
-    </div>
-  </div>
-</section>
-<style>
-.tech-visual{background:#fff; padding:100px 40px; border-top:1px solid #e6e6e6}
-.techv-grid{max-width:1160px; margin:0 auto; display:grid; grid-template-columns:1.4fr 1.0fr; gap:32px; align-items:start}
-.techv-title{font-size:clamp(25px,5vw,42px); margin-bottom:30px}
-.techv-lead{font-size:clamp(15px,4vw,20px); color:#404040; margin:0 0 18px; line-height:1.8}
-.techv-left {
-  margin-left: 0;              /* 기존 50px 제거 */
-  text-align: center;          /* 가운데 정렬 */
-}
-.techv-left .device-mock {
-  display: inline-block;       /* 텍스트 정렬 기준 맞춤 */
-  margin: 0 auto;
-}
-.techv-left .img-caption {
-  display: block;
-  text-align: center;          /* 가운데 정렬 */
-  margin-top: 8px;
-  color: #666;
-}
-.techv-right{margin-top:150px;}
-.device-mock.large{width:min(520px,100%); aspect-ratio:9/19; border:10px solid #111; border-radius:28px; background:#fff; overflow:hidden; box-shadow:0 18px 40px rgba(0,0,0,.15)}
-.device-mock.large img{width:100%; height:100%; object-fit:cover}
+        <div class="grid-3">
+            <div class="card-enhanced">
+                <div class="card-icon-wrapper">
+                    <i class="fas fa-sliders-h"></i>
+				</div>
+                <h3>맞춤형 데이터 설계</h3>
+                <p>나의 여건과 목표, 원하는 농업 방식에 맞춰 가장 적합한 스마트팜 설계를 제안합니다.</p>
+            </div>
+            <div class="card-enhanced">
+                <div class="card-icon-wrapper">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <h3>검증된 시설만 제공</h3>
+                <p>가격 안정성이 확보된 시설만 견적을 제공하며, 그 외 시설은 설계 기반으로 안내해드립니다.</p>
+            </div>
+            <div class="card-enhanced">
+                <div class="card-icon-wrapper">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3>견적·시공 가이드</h3>
+                <p>설계 결과를 바탕으로 현실적인 견적과 실제 시공이 가능한 업체를 바로 연결해, 복잡한 과정을 한 번에 이어지도록 돕습니다.</p>
+            </div>
+        </div>
+    </section>
 
-.kcard{background:#f9fafb; border:1px solid #e6e6e6; border-radius:16px; padding:14px; box-shadow:0 6px 16px rgba(0,0,0,.05); margin-bottom:45px}
-.khead{font-weight:700; color:#075a36; margin-bottom:10px}
-.kmetrics{list-style:none; margin:0; padding:0; display:grid; grid-template-columns:1fr 1fr; gap:8px}
-.kmetrics li{display:flex; justify-content:space-between; align-items:center; background:#fff; border:1px solid #eaeaea; border-radius:12px; padding:10px 12px}
-.kmetrics .tag{padding:2px 8px; border-radius:999px; font-size:12px; border:1px solid #e6e6e6; min-width:52px; text-align:center}
-.kmetrics .tag.good{background:#e6f9ef; color:#0a7a4a}
-.kmetrics .tag.warn{background:#fff6dc; color:#946c00}
-.kmetrics .tag.bad{background:#ffe9e9; color:#b03a3a}
+    <section class="cta-banner">
+        <div class="cta-content">
+            <h2>스마트팜, 어디서부터 시작할지 모르겠다면</h2>
+            <p>이피랑이 당신의 조건을 분석해 가장 현실적인 설계안과 실제 시공이 가능한 견적을 연결해드립니다.<br>복잡한 비교 없이, 시작에만 집중하세요.</p>
+            <a href="contact.html" class="btn btn-white">문의하기</a>
+        </div>
+    </section>
 
-.chart-mock{display:flex; align-items:flex-end; justify-content:space-between; gap:10px; height:210px; margin-top:10px}
-.chart-mock .bar{flex:1; border-radius:6px; background:#c8f5df; height:0; transition:height 900ms ease-out}
-.chart-mock .bar.steps{background:#cfefff}
-.chart-mock .bar.workout{background:#ffe6bf}
-.chart-mock .bar.hr{background:#fcd7d7}
-.chart-mock .bar.water{background:#9ee1c3}
-.chart-label{display:block; text-align:center; font-size:13px; color:#6a6a6a; margin-top:6px; width: 100%;}
-.chart-mock.played .bar{will-change:height}
+    <footer>
+		<div class="footer-inner">
+			<div class="brand">상호 : (주)이피랑 | 대표 : 김소연<br>메일 : eprang08@gmail.com<br>주소 : 경기도 김포시 고촌읍 상미로9번길 41</div>
+			<div class="socials">
+				<a href="#" aria-label="Instagram"><svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm10 2a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h10zm-5 3a5 5 0 1 0 0 10a5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6a3 3 0 0 1 0-6zm4.75-.75a1.25 1.25 0 1 1 0 2.5a1.25 1.25 0 0 1 0-2.5z"/></svg></a>
+			</div>
+			<p style="margin-top: 1rem;">&copy; 2025 Eprang. All Rights Reserved.</p>
+		</div>
+	</footer>
 
-@media (max-width:900px){.techv-grid{grid-template-columns:1fr; gap:22px}  .tech-visual {padding: 50px 20px;} .techv-right{margin-top:50px;} .techv-lead{width:260px; margin:0 auto 30px auto}}
-</style>
-
-<script>
-(function(){
-  const chart = document.getElementById('weeklyChart');
-  if(!chart) return;
-  const play = () => {
-    if(chart.classList.contains('played')) return;
-    chart.classList.add('played');
-    chart.querySelectorAll('.bar').forEach(bar=>{
-      const h = bar.getAttribute('data-h');
-      bar.style.height = h;
-    });
-  };
-  const io = new IntersectionObserver((entries)=>{
-    entries.forEach(e=>{ if(e.isIntersecting) { play(); io.disconnect(); } });
-  }, {threshold: 0.3});
-  io.observe(chart);
-})();
-</script>
-
-  <section id="value" class="value">
-    <div class="grid-3">
-      <div class="v-card v1"><svg width="60" height="60" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C8 6 5 8 5 12a7 7 0 0014 0c0-4-3-6-7-10z" fill="#0a7a4a"/></svg><h3>모종 중심</h3><p>기기가 아닌 <b>허브·잎채소</b> 자체에 집중하여 자연 그대로의 웰니스를 전합니다.</p></div>
-      <div class="v-card v2"><svg width="60" height="60" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="#0a7a4a" stroke-width="2"/><path d="M7 12h10M12 7v10" stroke="#0a7a4a" stroke-width="2" stroke-linecap="round"/></svg><h3>데이터 설문</h3><p>생활습관과 선호도를 반영해 최적의 <b>개인 맞춤 조합</b>을 추천합니다.</p></div>
-      <div class="v-card v3"><svg width="60" height="60" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="#0a7a4a" stroke-width="2"/><path d="M12 6v6l4 2" stroke="#0a7a4a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><h3>지속 가능한 루틴</h3><p>정기 공급되는 <b>라이브 플러그</b>로 매주 새로운 싱그러움을 이어갑니다.</p></div>
-    </div>
-  </section>
-
-  <section id="how" class="steps" aria-label="진행 방식">
-    <div class="step" data-step="01"><div class="badge">1</div><b>설문</b><small>생활 습관과 목표 파악</small></div>
-    <div class="step" data-step="02"><div class="badge">2</div><b>모종 추천</b><small>허브·잎채소 조합 제안</small></div>
-    <div class="step" data-step="03"><div class="badge">3</div><b>체험</b><small>레시피와 루틴 제공</small></div>
-    <div class="step" data-step="04"><div class="badge">4</div><b>정기구독</b><small>지속적 모종 관리</small></div>
-  </section>
-
-<footer>
-  <div class="footer-inner">
-    <div class="brand">상호 : (주)이피랑 | 대표 : 김소연<br>메일 : eprang08@gmail.com<br>주소 : 경기도 김포시 고촌읍 상미로9번길 41</div>
-    <div class="socials">
-      <a href="#" aria-label="Instagram"><svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm10 2a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h10zm-5 3a5 5 0 1 0 0 10a5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6a3 3 0 0 1 0-6zm4.75-.75a1.25 1.25 0 1 1 0 2.5a1.25 1.25 0 0 1 0-2.5z"/></svg></a>
-    </div>
-    <small>© 2025 (주)이피랑. All rights reserved.</small>
-  </div>
-</footer>
-
-<script>
-    const toggle = document.querySelector('.nav-toggle');
-    const nav = document.getElementById('global-nav');
-    function setExpanded(on){
-      if(!toggle||!nav) return;
-      toggle.setAttribute('aria-expanded', on ? 'true' : 'false');
-      nav.classList.toggle('open', !!on);
-      document.body.classList.toggle('nav-open', !!on);
-    }
-    if(toggle){
-      toggle.addEventListener('click', ()=>{
-        const isOpen = nav.classList.contains('open');
-        setExpanded(!isOpen);
-      });
-    }
-    document.querySelectorAll('#global-nav a').forEach(a=>a.addEventListener('click', ()=> setExpanded(false)));
-	
-	document.addEventListener('DOMContentLoaded', function () {
-	new Swiper('.mySwiper', {
-		loop: true,
-		autoplay: { delay: 3000 },
-		pagination: { el: '.swiper-pagination', clickable: true },
-		observer: true,
-		observeParents: true
-	});
-	});
-</script>
+    <script src="script.js"></script>
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			const swiper = new Swiper(".mySwiper", {
+				loop: true,
+				slidesPerView: 1,
+				autoplay: {
+					delay: 3000,
+				},
+				pagination: {
+					el: ".swiper-pagination",
+					clickable: true,
+				},
+				navigation: {
+					nextEl: ".swiper-button-next",
+					prevEl: ".swiper-button-prev",
+				},
+			});
+		});
+	</script>
 </body>
 </html>
