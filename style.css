@@ -139,7 +139,7 @@ header { background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); positi
 @keyframes float { 0%, 100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-20px) rotate(5deg); } }
 
 /* 회사소개 */
-.split-section { display: flex; align-items: center; gap: 4rem; margin-bottom: 6rem; }
+.split-section { display: flex; align-items: center; gap: 4rem; margin-bottom: 12rem; }
 .split-section:nth-child(even) { flex-direction: row-reverse; } /* 짝수 번째는 좌우 반전 */
 .split-content { flex: 1; }
 .split-visual { flex: 1; position: relative; }
