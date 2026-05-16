@@ -165,8 +165,7 @@
 	
 			<div class="patent-content">	
 				<div class="patent-label">출원 기술 소개</div>
-				<h3>AI 기반 스마트팜 설계 시스템</h3>	
-				<div class="patent-line"></div>	
+				<h3>조건 기반 스마트팜 자동 설계 기술</h3>
 				<p class="patent-desc">
 					사용자의 공간, 예산, 운영 조건 등 다양한 데이터를 분석하여
 					최적의 재배 환경과 시설 구성을 자동으로 설계하고,
@@ -177,8 +176,8 @@
 						<i class="fa-solid fa-cube"></i>
 					</div>	
 					<div>
-						<h4>조건 기반 자동 설계</h4>
-						<p>공간, 예산, 작물, 운영 조건을 반영한 맞춤형 설계 자동화</p>
+						<h4>생활·운영 조건 분석</h4>
+						<p>온보딩 설문 기반으로 사용자의 환경·운영 조건 데이터를 구조화</p>
 					</div>
 				</div>
 	
@@ -187,8 +186,8 @@
 						<i class="fa-solid fa-chart-column"></i>
 					</div>	
 					<div>
-						<h4>실행 가능한 견적 산출</h4>
-						<p>표준화된 데이터와 단가 기반으로 현실적인 견적 범위 제시</p>
+						<h4>조건 기반 시설·원물 추천</h4>
+						<p>클러스터링된 데이터를 기반으로 최적의 시설 구성과 재배 세트 추천</p>
 					</div>
 				</div>
 	
@@ -197,17 +196,67 @@
 						<i class="fa-solid fa-circle-check"></i>
 					</div>	
 					<div>
-						<h4>시공 연계 최적화</h4>
-						<p>설계 데이터를 기반으로 시공 계획 및 자재 구성을 최적화</p>
+						<h4>스마트팜 운영 프리셋 자동화</h4>
+						<p>조명·관수·온습도 등 재배 환경 설정값을 자동 연동 및 구성</p>
 					</div>
 				</div>
 	
 				<div class="patent-notice">
 					<i class="fa-solid fa-circle-info"></i>	
-					<span>본 기술은 현재 특허 출원 진행 중이며,출원 내용 및 범위는 추후 변경될 수 있습니다.</span>
+					<span>본 기술은 현재 특허 출원 진행 중이며, 출원 내용 및 범위는 추후 변경될 수 있습니다.</span>
 				</div>	
 			</div>
 		</div>
+		<!-- Patent Flow Diagram -->
+			<div class="patent-flow">
+				<div class="flow-item">
+					<div class="flow-icon">
+						<i class="fa-solid fa-sliders"></i>
+					</div>
+			
+					<h4>고객 조건 입력</h4>
+					<p>자본 규모, 근무 시간,<br>공간 환경, 운영 성향</p>
+				</div>
+			
+				<div class="flow-arrow">
+					<i class="fa-solid fa-arrow-right"></i>
+				</div>
+			
+				<div class="flow-item">
+					<div class="flow-icon">
+						<i class="fa-solid fa-brain"></i>
+					</div>
+			
+					<h4>데이터 분석 및 클러스터링</h4>
+					<p>사용자 조건 데이터를<br>구조화 및 유형 분석</p>
+				</div>
+			
+				<div class="flow-arrow">
+					<i class="fa-solid fa-arrow-right"></i>
+				</div>
+			
+				<div class="flow-item">
+					<div class="flow-icon">
+						<i class="fa-solid fa-seedling"></i>
+					</div>
+			
+					<h4>시설·원물·자동화 추천</h4>
+					<p>최적의 시설 구성과<br>재배 세트 자동 추천</p>
+				</div>
+			
+				<div class="flow-arrow">
+					<i class="fa-solid fa-arrow-right"></i>
+				</div>
+			
+				<div class="flow-item">
+					<div class="flow-icon">
+						<i class="fa-solid fa-gear"></i>
+					</div>
+			
+					<h4>운영 프리셋 자동 구성</h4>
+					<p>조명·관수·온습도 등<br>재배 환경 자동 설정</p>
+				</div>
+			</div>
 	</section>
 
     <footer>
@@ -222,12 +271,12 @@
 
     <script src="script.js"></script>
 	<style>
-	/* =========================
+	
+/* =========================
    Patent Section
 ========================= */
-
 .patent-wrap {
-    padding-top: 2rem;
+    padding-top: 12rem;
     padding-bottom: 6rem;
 }
 
@@ -259,8 +308,7 @@
 .patent-stamp {
     position: absolute;
     top: 28px;
-    left: 28px;
-
+    left: 102px;
     width: 120px;
     height: 120px;
     border-radius: 50%;
@@ -307,17 +355,9 @@
 }
 
 .patent-content h3 {
-    font-size: clamp(28px, 4vw, 42px);
+    font-size: 2rem;
     line-height: 1.3;
     margin-bottom: 1rem;
-}
-
-.patent-line {
-    width: 70px;
-    height: 3px;
-    background: var(--secondary-color);
-    border-radius: 999px;
-    margin-bottom: 2rem;
 }
 
 .patent-desc {
@@ -372,32 +412,28 @@
     font-size: 0.96rem;
 }
 
-/* notice */
-
 .patent-notice {
     margin-top: 2rem;
 
-    padding: 1.2rem 1.4rem;
+    padding: 0.6rem 0.8rem;
 
     border-radius: 14px;
 
     background: #f5f8f5;
 
     display: flex;
-    gap: 12px;
+    gap: 6px;
     align-items: flex-start;
 
     color: #666;
-    font-size: 0.92rem;
-    line-height: 1.7;
+    font-size: 0.8rem;
+    line-height: 1.4;
 }
 
 .patent-notice i {
     color: var(--primary-color);
-    margin-top: 4px;
+    margin-top: 5px;
 }
-
-/* 모바일 */
 
 @media (max-width: 768px) {
 
@@ -419,12 +455,16 @@
     }
 
     .patent-stamp {
-        width: 95px;
-        height: 95px;
-    }
+        width: 80px; height: 80px; top: 28px; left: 64px;
+	}
+
+	.patent-stamp i {
+		font-size: 1rem;
+		margin-bottom: 4px;
+	}
 
     .patent-stamp strong {
-        font-size: 0.78rem;
+        font-size: 0.7rem;
     }
 
     .feature-icon {
@@ -432,6 +472,126 @@
         height: 56px;
         min-width: 56px;
         font-size: 1.2rem;
+    }
+}
+
+/* =========================
+   Patent Flow Diagram
+========================= */
+
+.patent-flow {
+    margin-top: 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+
+    padding: 2rem;
+
+    background: linear-gradient(
+        180deg,
+        #f8fbf8 0%,
+        #f3f8f4 100%
+    );
+
+    border-radius: 28px;
+    border: 1px solid #e8efe9;
+
+    overflow-x: auto;
+}
+
+.flow-item {
+    min-width: 200px;
+    text-align: center;
+    position: relative;
+}
+
+.flow-icon {
+    width: 70px;
+    height: 70px;
+
+    margin: 0 auto 1.5rem;
+
+    border-radius: 24px;
+
+    background: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.8rem;
+    color: var(--primary-color);
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.05),
+        inset 0 1px 0 rgba(255,255,255,0.8);
+
+    border: 1px solid #edf2ee;
+}
+
+.flow-item h4 {
+    font-size: 1.05rem;
+    margin-bottom: 0.8rem;
+    color: var(--text-dark);
+    line-height: 1.4;
+}
+
+.flow-item p {
+    font-size: 0.92rem;
+    line-height: 1.7;
+    color: #666;
+}
+
+.flow-arrow {
+    font-size: 1.3rem;
+    color: #98b29f;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 40px;
+}
+
+/* 모바일 */
+
+@media (max-width: 1024px) {
+
+    .patent-flow {
+        justify-content: flex-start;
+        padding: 1rem;
+    }
+
+    .flow-item {
+        min-width: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .patent-flow {
+        gap: 0.5rem;
+    }
+
+    .flow-item {
+        min-width: 180px;
+    }
+
+    .flow-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+        border-radius: 20px;
+    }
+
+    .flow-item h4 {
+        font-size: 0.95rem;
+    }
+
+    .flow-item p {
+        font-size: 0.85rem;
     }
 }
 	</style>
