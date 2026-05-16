@@ -88,8 +88,8 @@
             </div>
 			<div class="mission-item">
 				<i class="fa-solid fa-link mission-icon"></i>
-                <h3>실제 시공이 가능한 업체와 연결하다</h3>
-                <p>검증된 가격 기준으로 산출 가능한 시설을 중심으로, 실제 시공이 가능한 파트너와 연결해드립니다.</p>
+                <h3>설계에서 구축까지 연결하다</h3>
+                <p>AI 기반 설계 데이터를 바탕으로 예산과 공간에 맞는 스마트팜 구축 과정을 효율적으로 제공합니다.</p>
             </div>
             <div class="mission-item">
                 <i class="fa-solid fa-database mission-icon"></i>
@@ -145,36 +145,70 @@
         </div>
     </section>
 	
-	<!-- 핵심 파트너스 -->
-    <section class="container bg-light">
-        <div class="section-title">
-            <h2>핵심 파트너스</h2>
-            <p>실내 스마트팜 설계와 견적, 시공을 함께 만드는 파트너 네트워크입니다.</p>
-        </div>
-        <div class="diff-grid">
-			<div class="diff-box">
-				<div class="diff-header">
-					<i class="fa-solid fa-handshake"></i>
-					<h3>스마트팜 설계·시공 파트너</h3>					
+	<!-- Technology & IP -->
+	<section class="container patent-wrap">
+		<div class="section-title">
+			<h2>TECHNOLOGY & IP</h2>
+			<p>이피랑은 데이터 기반 설계 기술을 핵심 자산으로, 더 정확하고 실행 가능한 스마트팜을 만들어갑니다.</p>
+		</div>
+	
+		<div class="patent-grid">
+			<div class="patent-visual">
+				<div class="patent-card">
+					<img src="images/patent.png" alt="특허 출원">	
+					<div class="patent-stamp">
+						<i class="fa-regular fa-file-lines"></i>
+						<strong>PATENT<br>PENDING</strong>
+					</div>
 				</div>
-				<p style="font-size:0.95rem; color:#666;">다양한 유형의 실내 스마트팜·육묘장을 설계·시공하며 축적된 레퍼런스를 바탕으로 안정적인 시설 구축을 지원합니다.</p>
 			</div>
-			<div class="diff-box">
-				<div class="diff-header">
-					<i class="fa-solid fa-seedling"></i>
-					<h3>실내 설비·환경제어 파트너</h3>					
-				</div>			
-				<p style="font-size:0.95rem; color:#666;">실내 스마트팜에 필요한 공조, 제습, LED, 양액 등 환경 제어 기반 설비를 공급·개발하는 파트너입니다.</p>
-			</div>
-			<div class="diff-box">
-				<div class="diff-header">
-					<i class="fa-solid fa-wrench"></i>
-					<h3>구조·설비 파트너</h3>					
+	
+			<div class="patent-content">	
+				<div class="patent-label">출원 기술 소개</div>
+				<h3>AI 기반 스마트팜 설계 시스템</h3>	
+				<div class="patent-line"></div>	
+				<p class="patent-desc">
+					사용자의 공간, 예산, 운영 조건 등 다양한 데이터를 분석하여
+					최적의 재배 환경과 시설 구성을 자동으로 설계하고,
+					실행 가능한 견적과 시공 계획까지 연결하는 기술입니다.
+				</p>	
+				<div class="patent-feature">
+					<div class="feature-icon">
+						<i class="fa-solid fa-cube"></i>
+					</div>	
+					<div>
+						<h4>조건 기반 자동 설계</h4>
+						<p>공간, 예산, 작물, 운영 조건을 반영한 맞춤형 설계 자동화</p>
+					</div>
 				</div>
-				<p style="font-size:0.95rem; color:#666;">실내 스마트팜·육묘장에 필요한 랙, 프레임, 구조물 등 표준화된 모듈과 설비를 함께 설계·제조하는 파트너입니다.</p>
+	
+				<div class="patent-feature">
+					<div class="feature-icon">
+						<i class="fa-solid fa-chart-column"></i>
+					</div>	
+					<div>
+						<h4>실행 가능한 견적 산출</h4>
+						<p>표준화된 데이터와 단가 기반으로 현실적인 견적 범위 제시</p>
+					</div>
+				</div>
+	
+				<div class="patent-feature">
+					<div class="feature-icon">
+						<i class="fa-solid fa-circle-check"></i>
+					</div>	
+					<div>
+						<h4>시공 연계 최적화</h4>
+						<p>설계 데이터를 기반으로 시공 계획 및 자재 구성을 최적화</p>
+					</div>
+				</div>
+	
+				<div class="patent-notice">
+					<i class="fa-solid fa-circle-info"></i>	
+					<span>본 기술은 현재 특허 출원 진행 중이며,출원 내용 및 범위는 추후 변경될 수 있습니다.</span>
+				</div>	
 			</div>
-        </div>
-    </section>
+		</div>
+	</section>
 
     <footer>
 		<div class="footer-inner">
@@ -187,5 +221,219 @@
 	</footer>
 
     <script src="script.js"></script>
+	<style>
+	/* =========================
+   Patent Section
+========================= */
+
+.patent-wrap {
+    padding-top: 2rem;
+    padding-bottom: 6rem;
+}
+
+.patent-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+/* 왼쪽 이미지 */
+
+.patent-card {
+    position: relative;
+    background: linear-gradient(180deg,#edf7ef,#f8fbf8);
+    border-radius: 28px;
+    overflow: hidden;
+    padding: 2rem;
+    border: 1px solid #edf0ed;
+}
+
+.patent-card img {
+    width: 100%;
+    display: block;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.patent-stamp {
+    position: absolute;
+    top: 28px;
+    left: 28px;
+
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.94);
+    border: 3px solid #3f9b5f;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    color: #2E7D32;
+
+    backdrop-filter: blur(8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.patent-stamp i {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+}
+
+.patent-stamp strong {
+    font-size: 0.95rem;
+    line-height: 1.2;
+    text-align: center;
+}
+
+/* 오른쪽 */
+
+.patent-label {
+    display: inline-block;
+    background: #e9f6ef;
+    color: var(--primary-color);
+
+    padding: 8px 16px;
+    border-radius: 999px;
+
+    font-size: 0.9rem;
+    font-weight: 700;
+
+    margin-bottom: 1.5rem;
+}
+
+.patent-content h3 {
+    font-size: clamp(28px, 4vw, 42px);
+    line-height: 1.3;
+    margin-bottom: 1rem;
+}
+
+.patent-line {
+    width: 70px;
+    height: 3px;
+    background: var(--secondary-color);
+    border-radius: 999px;
+    margin-bottom: 2rem;
+}
+
+.patent-desc {
+    color: #666;
+    line-height: 1.9;
+    font-size: 1.05rem;
+    margin-bottom: 2.5rem;
+}
+
+/* feature */
+
+.patent-feature {
+    display: flex;
+    gap: 1.2rem;
+
+    padding: 1.5rem 0;
+
+    border-top: 1px solid #ececec;
+}
+
+.patent-feature:first-of-type {
+    border-top: none;
+    padding-top: 0;
+}
+
+.feature-icon {
+    width: 68px;
+    height: 68px;
+
+    min-width: 68px;
+
+    border-radius: 50%;
+
+    background: #edf7ef;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+.patent-feature h4 {
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+}
+
+.patent-feature p {
+    color: #666;
+    line-height: 1.7;
+    font-size: 0.96rem;
+}
+
+/* notice */
+
+.patent-notice {
+    margin-top: 2rem;
+
+    padding: 1.2rem 1.4rem;
+
+    border-radius: 14px;
+
+    background: #f5f8f5;
+
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+
+    color: #666;
+    font-size: 0.92rem;
+    line-height: 1.7;
+}
+
+.patent-notice i {
+    color: var(--primary-color);
+    margin-top: 4px;
+}
+
+/* 모바일 */
+
+@media (max-width: 768px) {
+
+    .patent-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .patent-head {
+        margin-bottom: 2.5rem;
+    }
+
+    .patent-head h2 {
+        font-size: 2.4rem;
+    }
+
+    .patent-content h3 {
+        font-size: 2rem;
+    }
+
+    .patent-stamp {
+        width: 95px;
+        height: 95px;
+    }
+
+    .patent-stamp strong {
+        font-size: 0.78rem;
+    }
+
+    .feature-icon {
+        width: 56px;
+        height: 56px;
+        min-width: 56px;
+        font-size: 1.2rem;
+    }
+}
+	</style>
 </body>
 </html>
