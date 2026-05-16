@@ -101,6 +101,53 @@
             </div>
         </div>
     </section>
+	
+ <!-- 탄소저감 및 지속가능성 섹션 (번뜩이는 비주얼 레이아웃으로 업데이트) -->
+    <section class="innovative-esg">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge">Carbon Reduction</span>
+                <h2>지속 가능한 미래를 위한<br>이피랑의 <strong>세 가지 약속</strong></h2>
+            </div>
+
+            <div class="floating-content">
+                <!-- 아이템 1: 물 사용 -->
+                <div class="float-item water-saving">
+                    <div class="visual-number">90%</div>
+                    <div class="text-box">
+                        <div class="icon-circle"><i class="fa-solid fa-droplet"></i></div>
+                        <h3>물 사용 획기적 절감</h3>
+                        <p>수경재배 기반 순환 시스템으로 노지 대비 최대 90%의 물을 아낍니다. 데이터 기반의 정밀 제어로 자원 낭비를 원천 차단합니다.</p>
+                    </div>
+                </div>
+
+                <!-- 아이템 2: 친환경 (반대쪽 배치) -->
+                <div class="float-item eco-zero">
+					<div class="visual-deco"><i class="fa-solid fa-prescription-bottle-medical"></i></div>
+                    <div class="text-box">
+                        <div class="icon-circle"><i class="fa-solid fa-seedling"></i></div>
+                        <h3>농약·비료 제로 지향</h3>
+                        <p>외부와 차단된 환경이 병충해를 방지하고, 필요한 만큼의 양액만 공급하여 오염 없는 깨끗한 작물을 길러냅니다.</p>
+                    </div>
+                </div>
+
+                <!-- 아이템 3: 도심 생산 -->
+<div class="float-item city-farm">
+                    <div class="visual-graphic">
+                        <div class="city-line"></div>
+                        <div class="truck-box">
+                            <i class="fa-solid fa-truck-fast"></i>
+                        </div>
+                    </div>
+                    <div class="text-box">
+                        <div class="icon-circle"><i class="fa-solid fa-location-dot"></i></div>
+                        <h3>도심 생산 기반 탄소 저감</h3>
+                        <p>생산지와 소비지의 거리를 좁힙니다. 도심 내 유휴 공간을 농장으로 바꿔 탄소 배출이 큰 장거리 유통 과정을 획기적으로 줄입니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section class="cta-banner">
         <div class="cta-content">
@@ -140,5 +187,159 @@
 			});
 		});
 	</script>
+	<style>
+/* 신규 ESG 섹션 스타일 */
+.innovative-esg {
+    padding: 10rem 0;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 6rem;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.5rem 1.2rem;
+    background: #e9f6ef;
+    color: var(--primary-color);
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.section-header h2 {
+    font-size: 2.8rem;
+    line-height: 1.3;
+    font-weight: 400;
+}
+
+.section-header h2 strong {
+    color: var(--primary-color);
+    font-weight: 900;
+}
+
+.floating-content {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.float-item {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    margin-bottom: 8rem;
+}
+
+.float-item.eco-zero {
+    flex-direction: row-reverse;
+}
+
+.text-box {
+    flex: 1;
+    padding: 2rem;
+}
+
+.icon-circle {
+    width: 60px;
+    height: 60px;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 10px 20px rgba(46,125,50,0.2);
+}
+
+.text-box h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+.text-box p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    word-break: keep-all;
+}
+
+/* 비주얼 요소 */
+.visual-number {
+    font-size: 10rem;
+    font-weight: 900;
+    color: #a7d2b4;
+    line-height: 1;
+    user-select: none;
+}
+
+.visual-deco {
+    font-size: 8rem;
+    color: #a7d2b4;
+}
+
+.visual-graphic {
+    flex: 1;
+    position: relative;
+    height: 120px;
+    width: 100%;
+}
+
+.city-line {
+    position: absolute;
+    bottom: 30%;
+    width: 100%;
+    height: 2px;
+    background: repeating-linear-gradient(90deg, #ccc, #ccc 10px, transparent 10px, transparent 20px);
+}
+
+.truck-box {
+    position: absolute;
+    bottom: 52%;
+    left: 0;
+    width: 100%;
+    height: 60px;
+}
+
+.truck-box i {
+    position: absolute;
+    font-size: 5rem;
+    color: var(--primary-color);
+    /* left 대신 transform 사용하여 성능 및 모바일 대응 강화 */
+    animation: driveFixed 4s linear infinite;
+}
+
+@keyframes driveFixed {
+    0% { transform: translateX(-50px); opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { transform: translateX(350px); opacity: 0; }
+}
+
+@media (max-width: 768px) {
+    .float-item, .float-item.eco-zero { flex-direction: column; text-align: center; gap: 2rem; margin-bottom: 6rem; }
+    .icon-circle { margin: 0 auto 1.5rem; }
+    .visual-number { font-size: 8rem; }
+    .pure-visual { width: 150px; height: 150px; margin: 0 auto; }
+    .main-leaf { font-size: 6rem; }
+    .section-header h2 {font-size:2rem;}
+	.visual-deco {font-size:6rem;}
+	.truck-box i {font-size:4rem;}
+    @keyframes driveFixed {
+        0% { transform: translateX(-20px); opacity: 0; }
+        10% { opacity: 1; }
+        90% { opacity: 1; }
+        100% { transform: translateX(200px); opacity: 0; }
+    }
+}
+	</style>
 </body>
 </html>
