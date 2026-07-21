@@ -165,12 +165,31 @@
 	
 			<div class="patent-content">	
 				<div class="patent-label">출원 기술 소개</div>
-				<h3>조건 기반 스마트팜 자동 설계 기술</h3>
-				<p class="patent-desc">
+				<!--<h3>조건 기반 스마트팜 자동 설계 기술</h3>-->
+				<h3>개인화 원물 추천 및 스마트팜 운영 자동화 기술</h3>
+				<div class="patent-meta" aria-label="특허 출원 정보">
+					<span>
+						<strong>출원번호</strong>
+						10-2025-0165179
+					</span>
+				
+					<span>
+						<strong>출원일</strong>
+						2025. 11. 05.
+					</span>
+				</div>
+				<!--<p class="patent-desc">
 					사용자의 공간, 예산, 운영 조건 등 다양한 데이터를 분석하여
 					최적의 재배 환경과 시설 구성을 자동으로 설계하고,
 					실행 가능한 견적과 시공 계획까지 연결하는 기술입니다.
-				</p>	
+				</p>-->
+<p class="patent-desc">
+	사용자의 공간, 예산, 운영 조건 등 다양한 데이터를 분석하여
+	적합한 스마트팜 시설 구성과 운영 방향을 제안합니다.
+	나아가 생활패턴과 필수 제약조건을 기반으로 원물 세트를 추천하고,
+	선택된 원물에 맞는 재배 프리셋을 자동 구성하는 기술을
+	이피랑의 스마트팜 설계·운영 플랫폼에 연계하고 있습니다.
+</p>				
 				<div class="patent-feature">
 					<div class="feature-icon">
 						<i class="fa-solid fa-cube"></i>
@@ -555,6 +574,37 @@
     min-width: 40px;
 }
 
+.patent-meta {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 9px;
+
+	margin: 0 0 1.5rem;
+
+	color: #555;
+	font-size: 0.9rem;
+}
+
+.patent-meta span {
+	display: inline-flex;
+	align-items: center;
+	gap: 7px;
+
+	padding: 9px 13px;
+
+	background: #f7faf7;
+	border: 1px solid #dfeae1;
+	border-radius: 999px;
+
+	box-shadow: 0 2px 8px rgba(46, 125, 50, 0.04);
+}
+
+.patent-meta strong {
+	color: var(--primary-color);
+	font-weight: 700;
+}
+
 /* 모바일 */
 
 @media (max-width: 1024px) {
@@ -593,6 +643,15 @@
     .flow-item p {
         font-size: 0.85rem;
     }
+	
+	.patent-meta {
+		gap: 7px;
+	}
+
+	.patent-meta span {
+		padding: 8px 11px;
+	}
+
 }
 	</style>
 </body>
